@@ -49,7 +49,7 @@
         android:layout_marginTop="600px" />
 
     <TextView
-        android:id="@+id/pushupTextView"
+        android:id="@+id/tutorialTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tutorial_textview"
@@ -66,7 +66,7 @@
         android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/pushupTextView"
+        android:id="@+id/situpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/situp_textview"
@@ -74,7 +74,7 @@
         android:layout_marginTop="800px" />
 
     <TextView
-        android:id="@+id/pushupTextView"
+        android:id="@+id/tutorial2TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tutorial_textview"
@@ -82,7 +82,7 @@
         android:layout_marginTop="800px" />
 
     <EditText
-        android:id="@+id/editPushupText"
+        android:id="@+id/situpEditText"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100px"
@@ -99,7 +99,7 @@
         android:layout_marginTop="1000px" />
 
     <EditText
-        android:id="@+id/editWaistText"
+        android:id="@+id/frequencyEditText"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100px"
@@ -121,6 +121,7 @@
         android:text="@string/submit_button"
     android:layout_marginLeft="250px"
     android:layout_marginTop="1250px"
+        android:background="@color/colorGreen"
     />
 
     <TextView
@@ -129,7 +130,7 @@
         android:layout_height="wrap_content"
         android:text="@string/user_profile_textview"
         android:textSize="80px"
-        android:layout_marginLeft="250px"
+        android:layout_marginLeft="280px"
         android:layout_marginTop="30px"/>
 
 </RelativeLayout>
