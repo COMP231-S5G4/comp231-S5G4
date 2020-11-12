@@ -2,6 +2,7 @@
     <string name="app_name">comp231-S5G4</string>
 
     <!-- User Profile UI Values -->
+    <string name="user_profile_textview">USER PROFILE</string>
     <string name="height_textview">Height</string>
     <string name="waist_textview">Waist</string>
     <string name="pushup_textview">Pushup Score</string>

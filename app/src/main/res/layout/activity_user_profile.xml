@@ -116,10 +116,20 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="600px"
+        android:layout_height="200px"
         android:text="@string/submit_button"
-    android:layout_marginLeft="350px"
+    android:layout_marginLeft="250px"
     android:layout_marginTop="1250px"
     />
+
+    <TextView
+        android:id="@+id/userProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_profile_textview"
+        android:textSize="80px"
+        android:layout_marginLeft="250px"
+        android:layout_marginTop="30px"/>
+
 </RelativeLayout>
