@@ -1,9 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserProfileActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height_textview"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="200px"/>
+
+    <EditText
+        android:id="@+id/editHeightText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="250px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/waistTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/waist_textview"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="400px" />
+
+    <EditText
+        android:id="@+id/editWaistText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="450px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/pushupTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pushup_textview"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="600px" />
+
+    <TextView
+        android:id="@+id/pushupTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tutorial_textview"
+        android:layout_marginLeft="600px"
+        android:layout_marginTop="600px" />
+
+    <EditText
+        android:id="@+id/editPushupText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="650px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/pushupTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/situp_textview"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="800px" />
+
+    <TextView
+        android:id="@+id/pushupTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tutorial_textview"
+        android:layout_marginLeft="600px"
+        android:layout_marginTop="800px" />
+
+    <EditText
+        android:id="@+id/editPushupText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="850px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/frequencyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/frequency_textview"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="1000px" />
+
+    <EditText
+        android:id="@+id/editWaistText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="1050px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.comp231_s5g4.instabod.VideoUserProfileFragment"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="1500px" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_button"
+    android:layout_marginLeft="350px"
+    android:layout_marginTop="1250px"
+    />
+</RelativeLayout>

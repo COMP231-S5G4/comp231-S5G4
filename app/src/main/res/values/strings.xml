@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">comp231-S5G4</string>
+
+    <!-- User Profile UI Values -->
+    <string name="height_textview">Height</string>
+    <string name="waist_textview">Waist</string>
+    <string name="pushup_textview">Pushup Score</string>
+    <string name="situp_textview">Situp Score</string>
+    <string name="frequency_textview">Frequency of Excercise</string>
+    <string name="tutorial_textview">Tutorial</string>
+    <string name="submit_button">Submit/Update</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
