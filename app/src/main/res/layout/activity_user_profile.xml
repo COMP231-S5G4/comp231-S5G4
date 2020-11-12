@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="@string/height_textview"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="200px"/>
+        android:layout_marginTop="200px"
+        android:textColor="@color/colorBlack" />
 
     <EditText
         android:id="@+id/editHeightText"
@@ -29,7 +30,9 @@
         android:layout_height="wrap_content"
         android:text="@string/waist_textview"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="400px" />
+        android:layout_marginTop="400px"
+        android:textColor="@color/colorBlack"
+        />
 
     <EditText
         android:id="@+id/editWaistText"
@@ -46,7 +49,10 @@
         android:layout_height="wrap_content"
         android:text="@string/pushup_textview"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="600px" />
+        android:layout_marginTop="600px"
+        android:textColor="@color/colorBlack"
+
+        />
 
     <TextView
         android:id="@+id/tutorialTextView"
@@ -54,7 +60,8 @@
         android:layout_height="wrap_content"
         android:text="@string/tutorial_textview"
         android:layout_marginLeft="600px"
-        android:layout_marginTop="600px" />
+        android:layout_marginTop="600px"
+        android:textColor="@color/colorPrimary"/>
 
     <EditText
         android:id="@+id/editPushupText"
@@ -71,7 +78,8 @@
         android:layout_height="wrap_content"
         android:text="@string/situp_textview"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="800px" />
+        android:layout_marginTop="800px"
+        android:textColor="@color/colorBlack"/>
 
     <TextView
         android:id="@+id/tutorial2TextView"
@@ -79,7 +87,8 @@
         android:layout_height="wrap_content"
         android:text="@string/tutorial_textview"
         android:layout_marginLeft="600px"
-        android:layout_marginTop="800px" />
+        android:layout_marginTop="800px"
+        android:textColor="@color/colorPrimary"/>
 
     <EditText
         android:id="@+id/situpEditText"
@@ -96,7 +105,8 @@
         android:layout_height="wrap_content"
         android:text="@string/frequency_textview"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="1000px" />
+        android:layout_marginTop="1000px"
+        android:textColor="@color/colorBlack"/>
 
     <EditText
         android:id="@+id/frequencyEditText"
@@ -131,6 +141,7 @@
         android:text="@string/user_profile_textview"
         android:textSize="80px"
         android:layout_marginLeft="280px"
-        android:layout_marginTop="30px"/>
+        android:layout_marginTop="30px"
+        android:textColor="@color/colorBlack"/>
 
 </RelativeLayout>
