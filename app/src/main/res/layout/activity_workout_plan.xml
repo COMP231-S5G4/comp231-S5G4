@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkoutPlanActivity">
+
+    <Button
+        android:id="@+id/userprofile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorGreen"
+        android:text="@string/userprofile_button"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorGreen"
+        android:text="@string/logout_button"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/workout_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/workout_textview"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <fragment
+        android:id="@+id/fitnessinformatio_fragment"
+        android:name="com.comp231_s5g4.instabod.FitnessInformationFragment"
+        android:layout_width="316dp"
+        android:layout_height="154dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp" />
+
+    <fragment
+        android:id="@+id/day1_fragment"
+        android:name="com.comp231_s5g4.instabod.DaysFragment"
+        android:layout_width="160dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="300dp" />
+
+    <fragment
+        android:id="@+id/day2_fragment"
+        android:name="com.comp231_s5g4.instabod.DaysFragment"
+        android:layout_width="160dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="300dp" />
+
+    <fragment
+        android:id="@+id/day3_fragment"
+        android:name="com.comp231_s5g4.instabod.DaysFragment"
+        android:layout_width="160dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="400dp" />
+
+    <fragment
+        android:id="@+id/day4_fragment"
+        android:name="com.comp231_s5g4.instabod.DaysFragment"
+        android:layout_width="160dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="400dp" />
+
+    <fragment
+        android:id="@+id/day5_fragment"
+        android:name="com.comp231_s5g4.instabod.DaysFragment"
+        android:layout_width="160dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="500dp" />
+
+    <fragment
+        android:id="@+id/day6_fragment"
+        android:name="com.comp231_s5g4.instabod.DaysFragment"
+        android:layout_width="160dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="500dp" />
+
+    <fragment
+        android:id="@+id/day7_fragment"
+        android:name="com.comp231_s5g4.instabod.DaysFragment"
+        android:layout_width="160dp"
+        android:layout_height="82dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="600dp" />
+
+</RelativeLayout>
