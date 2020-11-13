@@ -3,10 +3,9 @@ package com.comp231_s5g4.instabod;
 import java.util.ArrayList;
 
 public class WorkoutAlgorithm {
-    ArrayList<Workout> weeklyWorkouts;
+    public ArrayList<Workout> weeklyWorkouts;
     InstabodWorkouts workouts;
-    int RFM,age,gender;
-    int calulatedRFM;
+    private int RFM,age,gender;
 
     public WorkoutAlgorithm(int RFM, int age,int gender) {
         this.RFM = RFM;
@@ -22,8 +21,10 @@ public class WorkoutAlgorithm {
         weeklyWorkouts = new ArrayList<Workout>();
     }
 
-    void genrateWorkout(){
+    ArrayList<Workout> genrateWorkout(){
         filerWorkoutData();
+        int size=weeklyWorkouts.size();
+        return weeklyWorkouts;
     }
 
     void filerWorkoutData(){
