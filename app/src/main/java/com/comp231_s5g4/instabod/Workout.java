@@ -6,7 +6,7 @@ public class Workout {
     private int rfm;
     private String gender;
     private String workoutName;
-    private int reps;
+    private int repetition;
     private String videoHyperlink;
 
     public int getAge() {
@@ -25,20 +25,20 @@ public class Workout {
         return workoutName;
     }
 
-    public int getReps() {
-        return reps;
+    public int getRepetition() {
+        return repetition;
     }
 
     public String getVideoHyperlink() {
         return videoHyperlink;
     }
 
-    public Workout(int age, int rfm, String gender, String workoutName, int reps, String videoHyperlink) {
+    public Workout(int age, int rfm, String gender, String workoutName, int repetition, String videoHyperlink) {
         this.age = age;
         this.rfm = rfm;
         this.gender = gender;
         this.workoutName = workoutName;
-        this.reps = reps;
+        this.repetition = repetition;
         this.videoHyperlink = videoHyperlink;
     }
 }
