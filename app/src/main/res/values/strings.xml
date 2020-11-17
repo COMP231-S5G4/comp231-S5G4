@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">comp231-S5G4</string>
+    <string name="logout_button">Log Out</string>
+    <string name="userprofile_button">User Profile</string>
+    <string name="workout_textview">WORKOUT</string>
+    <string name="fitnessinformation_textview"><u>Fitness Information</u></string>
+    <string name="RFM_textview">RFM: </string>
+    <string name="pushups_textview">Push Ups: </string>
+    <string name="situps_textview">Sit Ups: </string>
+    <string name="day1_textview">DAY 1</string>
+    <string name="day1Name_textview">Name: </string>
+    <string name="day1Reps_textview">Reps: </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
