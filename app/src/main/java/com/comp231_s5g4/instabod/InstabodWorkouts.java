@@ -6,7 +6,7 @@ public class InstabodWorkouts {
 
     public static ArrayList<Workout> workoutList;
 
-    public static void main(String args[]){
+    InstabodWorkouts(){
         workoutList = new ArrayList<Workout>();
 
         //For Males
