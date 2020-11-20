@@ -8,8 +8,15 @@
     <string name="pushups_textview">Push Ups: </string>
     <string name="situps_textview">Sit Ups: </string>
     <string name="day1_textview">DAY 1</string>
+    <string name="day2_textview">DAY 2</string>
+    <string name="day3_textview">DAY 3</string>
+    <string name="day4_textview">DAY 4</string>
+    <string name="day5_textview">DAY 5</string>
+    <string name="day6_textview">DAY 6</string>
+    <string name="day7_textview">DAY 7</string>
     <string name="day1Name_textview">Name: </string>
     <string name="day1Reps_textview">Reps: </string>
+
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user_profile_textview">USER PROFILE</string>

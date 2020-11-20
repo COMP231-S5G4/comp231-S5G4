@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B8F4A9"
+    tools:context=".PopUpActivity">
+
+    <TextView
+        android:id="@+id/exerciseTitleTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00A5E857"
+        android:layout_centerHorizontal="true"
+        android:text="HEADING"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <TextView
+        android:id="@+id/exerciseName_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:text="Name: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/exerciseReps_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="100dp"
+        android:text="No of Reps: "
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/hyperlink_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="220dp"
+
+        android:text="Hyperlink:"
+        android:textSize="18sp" />
+</RelativeLayout>
