@@ -47,60 +47,74 @@
         android:layout_marginTop="100dp"
         android:layout_marginRight="50dp" />
 
-    <fragment
-        android:id="@+id/day1_fragment"
-        android:name="com.comp231_s5g4.instabod.DaysFragment"
-        android:layout_width="160dp"
-        android:layout_height="82dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="300dp" />
+    <Button
+        android:id="@+id/day1_button"
+        android:layout_width="153dp"
+        android:layout_height="84dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="300dp"
+        android:background="@color/colorGreen"
+        android:onClick="day1Button"
+        android:text="@string/day1_textview" />
 
-    <fragment
-        android:id="@+id/day2_fragment"
-        android:name="com.comp231_s5g4.instabod.DaysFragment"
-        android:layout_width="160dp"
-        android:layout_height="82dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="300dp" />
+    <Button
+        android:id="@+id/day2_button"
+        android:layout_width="153dp"
+        android:layout_height="84dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="300dp"
+        android:background="@color/colorGreen"
+        android:onClick="day2Button"
+        android:text="@string/day2_textview" />
 
-    <fragment
-        android:id="@+id/day3_fragment"
-        android:name="com.comp231_s5g4.instabod.DaysFragment"
-        android:layout_width="160dp"
-        android:layout_height="82dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="400dp" />
+    <Button
+        android:id="@+id/day3_button"
+        android:layout_width="153dp"
+        android:layout_height="84dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="400dp"
+        android:background="@color/colorGreen"
+        android:onClick="day3Button"
+        android:text="@string/day3_textview" />
 
-    <fragment
-        android:id="@+id/day4_fragment"
-        android:name="com.comp231_s5g4.instabod.DaysFragment"
-        android:layout_width="160dp"
-        android:layout_height="82dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="400dp" />
+    <Button
+        android:id="@+id/day4_button"
+        android:layout_width="153dp"
+        android:layout_height="84dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="400dp"
+        android:background="@color/colorGreen"
+        android:onClick="day4Button"
+        android:text="@string/day4_textview" />
 
-    <fragment
-        android:id="@+id/day5_fragment"
-        android:name="com.comp231_s5g4.instabod.DaysFragment"
-        android:layout_width="160dp"
-        android:layout_height="82dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="500dp" />
+    <Button
+        android:id="@+id/day5_button"
+        android:layout_width="153dp"
+        android:layout_height="84dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"
+        android:background="@color/colorGreen"
+        android:onClick="day5Button"
+        android:text="@string/day5_textview" />
 
-    <fragment
-        android:id="@+id/day6_fragment"
-        android:name="com.comp231_s5g4.instabod.DaysFragment"
-        android:layout_width="160dp"
-        android:layout_height="82dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="500dp" />
+    <Button
+        android:id="@+id/day6_button"
+        android:layout_width="153dp"
+        android:layout_height="84dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="500dp"
+        android:background="@color/colorGreen"
+        android:onClick="day6Button"
+        android:text="@string/day6_textview" />
 
-    <fragment
-        android:id="@+id/day7_fragment"
-        android:name="com.comp231_s5g4.instabod.DaysFragment"
-        android:layout_width="160dp"
-        android:layout_height="82dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="600dp" />
+    <Button
+        android:id="@+id/day7_button"
+        android:layout_width="153dp"
+        android:layout_height="84dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="610dp"
+        android:background="@color/colorGreen"
+        android:onClick="day7Button"
+        android:text="@string/day7_textview" />
 
 </RelativeLayout>
