@@ -19,5 +19,9 @@
     <string name="situp_textview">Situp Score</string>
     <string name="pushup_textview">Push up Score</string>
     <string name="waist_textview">Waist Circumference</string>
-    <string name="height_textview">Hight</string>
+    <string name="height_textview">Height</string>
+
+    <string name="modify_button">MODIFY</string>
+    <string name="modify_user_profile_textview">MODIFY USER PROFILE</string>
+
 </resources>
