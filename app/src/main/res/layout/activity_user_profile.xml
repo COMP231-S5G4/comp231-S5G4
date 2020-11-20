@@ -22,7 +22,7 @@
         android:layout_marginLeft="100px"
         android:layout_marginTop="250px"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/waistTextView"
@@ -41,7 +41,7 @@
         android:layout_marginLeft="100px"
         android:layout_marginTop="450px"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/pushupTextView"
@@ -70,7 +70,7 @@
         android:layout_marginLeft="100px"
         android:layout_marginTop="650px"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/situpTextView"
@@ -97,7 +97,7 @@
         android:layout_marginLeft="100px"
         android:layout_marginTop="850px"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/frequencyTextView"
@@ -115,7 +115,7 @@
         android:layout_marginLeft="100px"
         android:layout_marginTop="1050px"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <fragment
         android:id="@+id/fragment"
@@ -125,7 +125,7 @@
         android:layout_marginTop="1500px" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submitButton"
         android:layout_width="600px"
         android:layout_height="200px"
         android:text="@string/submit_button"
