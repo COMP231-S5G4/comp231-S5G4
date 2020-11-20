@@ -10,6 +10,14 @@
     <string name="day1_textview">DAY 1</string>
     <string name="day1Name_textview">Name: </string>
     <string name="day1Reps_textview">Reps: </string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_profile_textview">USER PROFILE</string>
+    <string name="submit_button">SUBMIT</string>
+    <string name="frequency_textview">Frequency of Exercise</string>
+    <string name="tutorial_textview">tutorial</string>
+    <string name="situp_textview">Situp Score</string>
+    <string name="pushup_textview">Push up Score</string>
+    <string name="waist_textview">Waist Circumference</string>
+    <string name="height_textview">Hight</string>
 </resources>
