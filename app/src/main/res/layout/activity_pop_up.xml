@@ -31,17 +31,74 @@
         android:id="@+id/exerciseReps_Textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="30dp"
         android:text="No of Reps: "
         android:textSize="18sp" />
     <TextView
         android:id="@+id/hyperlink_Textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="220dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:text="Hyperlink:"
+        android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/exerciseName2_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     android:layout_below="@id/hyperlink_Textview"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Name: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/exerciseReps2_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exerciseName2_Textview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="No of Reps: "
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/hyperlink2_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exerciseReps2_Textview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="Hyperlink:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/exerciseName3_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hyperlink2_Textview"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Name: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/exerciseReps3_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exerciseName3_Textview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="No of Reps: "
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/hyperlink3_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exerciseReps3_Textview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
         android:text="Hyperlink:"
         android:textSize="18sp" />
 </RelativeLayout>
