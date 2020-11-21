@@ -21,7 +21,7 @@ public class WorkoutAlgorithm {
         weeklyWorkouts = new ArrayList<Workout>();
     }
 
-    ArrayList<Workout> genrateWorkout(){
+    ArrayList<Workout> generateWorkout(){
         filerWorkoutData();
         int size=weeklyWorkouts.size();
         return weeklyWorkouts;
