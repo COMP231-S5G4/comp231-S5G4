@@ -41,6 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="110dp"
         android:layout_marginLeft="30dp"
+        android:linksClickable="true"
+        android:autoLink="web"
         android:text="Hyperlink:"
         android:textSize="18sp" />
 
@@ -71,6 +73,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:text="Hyperlink:"
+        android:linksClickable="true"
+        android:autoLink="web"
         android:textSize="18sp" />
 
     <TextView
@@ -100,5 +104,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:text="Hyperlink:"
+        android:linksClickable="true"
+        android:autoLink="web"
         android:textSize="18sp" />
 </RelativeLayout>
