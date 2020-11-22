@@ -11,10 +11,11 @@
         android:theme="@style/AppTheme">
 
       <activity android:name=".ModifyUserProfileActivity"/>
+      <activity android:name=".WorkoutPlanActivity"></activity>
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".PopUpActivity" android:theme="@style/AppTheme.PopUpTheme"/>
-        <activity android:name=".WorkoutPlanActivity">
+        <activity android:name=".ModifyUserProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
