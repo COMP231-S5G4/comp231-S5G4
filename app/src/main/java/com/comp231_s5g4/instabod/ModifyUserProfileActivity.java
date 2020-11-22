@@ -3,6 +3,7 @@ package com.comp231_s5g4.instabod;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -28,35 +29,94 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
         int pushUps = 0;
         int sitUpScore = 0;
         int freqExercise = 0;
+        Boolean isFocused = false;
+
+
+
         try{
             height = Integer.parseInt(heightEditText.getText().toString());
-            waist = Integer.parseInt(waistEditText.getText().toString());
-            pushUps = Integer.parseInt(pushUpScoreEditText.getText().toString());
-            sitUpScore = Integer.parseInt(situpScoreEditText.getText().toString());
-            freqExercise = Integer.parseInt(freqExerciseEditText.getText().toString());
         }
         catch (Exception e){
-            Toast.makeText(this, "Invalid input(s)", Toast.LENGTH_SHORT).show();
+            heightEditText.requestFocus();
+            heightEditText.setTextColor(Color.RED);
             return;
         }
-        if(height == 0){
-            Toast.makeText(this, "Invalid input(s)", Toast.LENGTH_SHORT).show();
+
+        try{
+            waist = Integer.parseInt(waistEditText.getText().toString());
+        }
+        catch(Exception e){
+            waistEditText.requestFocus();
+            waistEditText.setTextColor(Color.RED);
             return;
         }
-        if(waist == 0){
-            Toast.makeText(this, "Invalid input(s)", Toast.LENGTH_SHORT).show();
+        try{
+            pushUps = Integer.parseInt(pushUpScoreEditText.getText().toString());
+        }
+        catch (Exception e){
+            pushUpScoreEditText.requestFocus();
+            heightEditText.setTextColor(Color.RED);
             return;
         }
-        if(pushUps == 0){
-            Toast.makeText(this, "Invalid input(s)", Toast.LENGTH_SHORT).show();
+        try{
+            sitUpScore = Integer.parseInt(situpScoreEditText.getText().toString());
+        }
+        catch (Exception e){
+            situpScoreEditText.requestFocus();
+            heightEditText.setTextColor(Color.RED);
             return;
         }
-        if(sitUpScore == 0){
-            Toast.makeText(this, "Invalid input(s)", Toast.LENGTH_SHORT).show();
+        try{
+            freqExercise = Integer.parseInt(freqExerciseEditText.getText().toString());
+        }
+        catch(Exception e){
+            freqExerciseEditText.requestFocus();
+            freqExerciseEditText.setTextColor(Color.RED);
             return;
         }
-        if(freqExercise == 0){
-            Toast.makeText(this, "Invalid input(s)", Toast.LENGTH_SHORT).show();
+
+
+
+
+
+        if(height == 0 || height > 250){
+            heightEditText.setTextColor(Color.RED);
+            if(!isFocused){
+                heightEditText.requestFocus();
+                isFocused = true;
+            }
+            return;
+        }
+        if(waist == 0 || waist > 200){
+            waistEditText.setTextColor(Color.RED);
+            if(!isFocused){
+                waistEditText.requestFocus();
+                isFocused = true;
+            }
+            return;
+        }
+        if(pushUps == 0 || pushUps > 150){
+            pushUpScoreEditText.setTextColor(Color.RED);
+            if(!isFocused){
+                pushUpScoreEditText.requestFocus();
+                isFocused = true;
+            }
+            return;
+        }
+        if(sitUpScore == 0 || sitUpScore > 100){
+            situpScoreEditText.setTextColor(Color.RED);
+            if(!isFocused){
+                situpScoreEditText.requestFocus();
+                isFocused = true;
+            }
+            return;
+        }
+        if(freqExercise == 0 || freqExercise > 7){
+            freqExerciseEditText.setTextColor(Color.RED);
+            if(!isFocused){
+                freqExerciseEditText.requestFocus();
+                isFocused = true;
+            }
             return;
         }
         startActivity(intent);
