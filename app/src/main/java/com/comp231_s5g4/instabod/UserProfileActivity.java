@@ -149,7 +149,18 @@ public class UserProfileActivity extends AppCompatActivity {
 
                 if(isError){
                     WorkoutUser workoutUser=new WorkoutUser();
+                    workoutUser.setHeight(height);
+                    workoutUser.setWaistCircumference(waist);
+                    workoutUser.setPushUpScore(pushScore);
+                    workoutUser.setSitUpScore(situpScore);
+                    workoutUser.setFrequencyOfExercise(frequency);
 
+                    /*
+
+                    DB Code Goes Here and will be done after the registration part is done
+                    because of dependency.
+
+                     */
                 }
             }
         });
