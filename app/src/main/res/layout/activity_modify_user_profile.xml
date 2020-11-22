@@ -128,6 +128,7 @@
         android:layout_width="600px"
         android:layout_height="200px"
         android:background="@color/colorGreen"
+        android:onClick="modifyUserProfile"
         android:text="@string/modify_button"
         tools:layout_editor_absoluteX="91dp"
         tools:layout_editor_absoluteY="470dp" />
