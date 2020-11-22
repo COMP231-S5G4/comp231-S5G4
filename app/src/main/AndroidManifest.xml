@@ -11,7 +11,6 @@
         android:theme="@style/AppTheme">
 
       <activity android:name=".ModifyUserProfileActivity"></activity>
-        <activity android:name=".UserProfileActivity" >
         <activity android:name=".UserProfileActivity"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".PopUpActivity" android:theme="@style/AppTheme.PopUpTheme"/>
@@ -21,10 +20,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".WorkoutPlanActivity" />
-        <activity android:name=".MainActivity">
-
         </activity>
     </application>
 
