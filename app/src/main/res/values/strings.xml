@@ -27,6 +27,9 @@
     <string name="pushup_textview">Push up Score</string>
     <string name="waist_textview">Waist Circumference</string>
     <string name="height_textview">Height</string>
+    <string name="adminPage_textview">ADMIN HOME PAGE</string>
+    <string name="searchButton_textview">SEARCH</string>
+    <string name="resetButton_textview">RESET</string>
 
     <string name="modify_button">MODIFY</string>
     <string name="modify_user_profile_textview">MODIFY USER PROFILE</string>
