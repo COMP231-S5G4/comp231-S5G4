@@ -45,7 +45,6 @@
         android:layout_marginTop="800px"
         android:textColor="@color/colorBlack"
         />
-7
     <EditText
         android:id="@+id/editWaistText"
         android:layout_width="335dp"
