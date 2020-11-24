@@ -45,7 +45,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
 //            Log.i("Error: ",exception.getMessage());
 //        }
     }
-}
+
     public void modifyUserProfile(View v){
         Intent intent = new Intent(this, WorkoutPlanActivity.class);
         heightEditText = findViewById(R.id.editHeightText);

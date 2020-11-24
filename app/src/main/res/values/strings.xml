@@ -31,4 +31,12 @@
     <string name="modify_button">MODIFY</string>
     <string name="modify_user_profile_textview">MODIFY USER PROFILE</string>
 
+    <string name="login_textview">LOG IN</string>
+    <string name="username_textview">Enter Username</string>
+    <string name="enter_password_textview">Enter Password</string>
+    <string name="sign_up_textview">Sign Up</string>
+    <string name="forgot_password_textview">Forgot Password?</string>
+
+
+
 </resources>
