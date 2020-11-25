@@ -55,8 +55,11 @@ LoginActivity extends AppCompatActivity {
                         if(password.equals(workoutUser.getPassword())){
                             // Username & password Valid
                             // TODO - Enter the Shared Preference and move to next activity
-                            SharedPreferences shared = getPreferences(Context.MODE_PRIVATE);
+                            SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = shared.edit();
+                            editor.putString("username",username);
+                            editor.putInt("id",convertedUsername);
+                            editor.putString("password",password);
                             editor.apply();
                             UsernameEditText.setTextColor(Color.BLACK);
                             Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
