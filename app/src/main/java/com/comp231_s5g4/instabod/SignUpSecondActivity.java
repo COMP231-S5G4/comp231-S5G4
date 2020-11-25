@@ -12,13 +12,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Pattern;
@@ -28,6 +31,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
     private  EditText dateOfBirthText, genderText, securityFirstQuestionText, securityFirstAnswerText, securitySecondQuestionText, securitySecondAnswerText;
     private SharedPreferences workoutUserPref;
     private String dateOfBirth, gender, securityFirstQuestion, securityFirstAnswer, securitySecondQuestion, securitySecondAnswer;
+    private Spinner genderSpinner;
     private int age;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +39,18 @@ public class SignUpSecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up_second);
         workoutUserPref = getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
 
+        ArrayList<String> genderList=new ArrayList<String>();
+        genderList.add("Male");
+        genderList.add("Female");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,genderList);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        genderSpinner = findViewById(R.id.genderSpinner);
+        genderSpinner.setAdapter(adapter);
+
         dateOfBirthText = (EditText) findViewById(R.id.dateOfBirthText);
-        genderText = (EditText) findViewById(R.id.genderText);
+        //genderText = (EditText) findViewById(R.id.genderText);
         securityFirstQuestionText = (EditText) findViewById(R.id.securityFirstQuestionText);
         securityFirstAnswerText = (EditText) findViewById(R.id.securityFirstAnswerText);
         securitySecondQuestionText = (EditText) findViewById(R.id.securitySecondQuestionText);
@@ -48,11 +62,13 @@ public class SignUpSecondActivity extends AppCompatActivity {
     public void registerNext(View v) throws ParseException {
 
         dateOfBirthText.setTextColor(Color.BLACK);
-        genderText.setTextColor(Color.BLACK);
         securityFirstQuestionText.setTextColor(Color.BLACK);
         securityFirstAnswerText.setTextColor(Color.BLACK);
         securitySecondQuestionText.setTextColor(Color.BLACK);
         securitySecondAnswerText.setTextColor(Color.BLACK);
+
+        //Getting the Gender from the Spinner
+        gender = genderSpinner.getSelectedItem().toString();
 
         Boolean isError=true;
 
@@ -88,14 +104,6 @@ public class SignUpSecondActivity extends AppCompatActivity {
         }
         else{
             dateOfBirthText.requestFocus();
-            isError=false;
-        }
-
-        if(!genderText.getText().toString().equals("")){
-            gender = genderText.getText().toString();
-        }
-        else{
-            genderText.requestFocus();
             isError=false;
         }
 
