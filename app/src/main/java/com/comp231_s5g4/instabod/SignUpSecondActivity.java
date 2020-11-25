@@ -62,11 +62,13 @@ public class SignUpSecondActivity extends AppCompatActivity {
     public void registerNext(View v) throws ParseException {
 
         dateOfBirthText.setTextColor(Color.BLACK);
-        genderText.setTextColor(Color.BLACK);
         securityFirstQuestionText.setTextColor(Color.BLACK);
         securityFirstAnswerText.setTextColor(Color.BLACK);
         securitySecondQuestionText.setTextColor(Color.BLACK);
         securitySecondAnswerText.setTextColor(Color.BLACK);
+
+        //Getting the Gender from the Spinner
+        gender = genderSpinner.getSelectedItem().toString();
 
         Boolean isError=true;
 
@@ -102,14 +104,6 @@ public class SignUpSecondActivity extends AppCompatActivity {
         }
         else{
             dateOfBirthText.requestFocus();
-            isError=false;
-        }
-
-        if(!genderText.getText().toString().equals("")){
-            gender = genderText.getText().toString();
-        }
-        else{
-            genderText.requestFocus();
             isError=false;
         }
 
