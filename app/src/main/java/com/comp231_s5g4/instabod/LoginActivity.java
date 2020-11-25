@@ -57,7 +57,6 @@ LoginActivity extends AppCompatActivity {
                             // TODO - Enter the Shared Preference and move to next activity
                             SharedPreferences shared = getPreferences(Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = shared.edit();
-                            editor.putString("username", password);
                             editor.apply();
                             UsernameEditText.setTextColor(Color.BLACK);
                             Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
