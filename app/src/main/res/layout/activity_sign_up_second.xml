@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpSecondActivity">
+
+    <TextView
+        android:id="@+id/dateOfBirthTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="200px"
+        android:text="@string/date_of_birth"
+        android:textColor="@color/colorBlack"
+        />
+
+    <EditText
+        android:id="@+id/dateOfBirthText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="MM/DD/YYYY"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="250px" />
+
+    <TextView
+        android:id="@+id/genderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="400px"/>
+
+    <EditText
+        android:id="@+id/genderText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="450px" />
+
+    <TextView
+        android:id="@+id/securityFirstQuestionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/security_question_1"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="600px"/>
+
+    <EditText
+        android:id="@+id/securityFirstQuestionText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/select_the_first_security_question"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="650px" />
+
+    <TextView
+        android:id="@+id/securityFirstQuestionAnswerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/security_question_answer_1"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="800px" />
+
+    <EditText
+        android:id="@+id/securityFirstQuestionAnswerText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="850px" />
+
+    <TextView
+        android:id="@+id/securitySecondQuestionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/security_question_2"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="1000px"/>
+
+    <EditText
+        android:id="@+id/securitySecondQuestionText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/select_the_second_security_question"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="1050px" />
+
+    <TextView
+        android:id="@+id/securitySecondQuestionAnswerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/security_question_answer_2"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="1200px"  />
+
+    <EditText
+        android:id="@+id/securitySecondQuestionAnswerText"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="1250px"  />
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="600px"
+        android:layout_height="200px"
+        android:background="@color/colorGreen"
+        android:text="@string/sign_up_textview"
+        android:layout_marginLeft="250px"
+        android:layout_marginTop="1450px"  />
+
+    <TextView
+        android:id="@+id/SignupTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sign_up_textview"
+        android:textColor="@color/colorBlack"
+        android:textSize="80px"
+        android:layout_marginLeft="280px"
+        android:layout_marginTop="30px"
+    />
+
+</RelativeLayout>
