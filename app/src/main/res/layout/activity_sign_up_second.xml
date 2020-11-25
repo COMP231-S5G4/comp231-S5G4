@@ -21,7 +21,7 @@
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="MM/DD/YYYY"
+        android:hint="YYYY/MM/DD"
         android:layout_marginLeft="100px"
         android:layout_marginTop="250px" />
 
@@ -61,7 +61,7 @@
         android:layout_marginTop="650px" />
 
     <TextView
-        android:id="@+id/securityFirstQuestionAnswerTextView"
+        android:id="@+id/securityFirstAnswerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/security_question_answer_1"
@@ -70,7 +70,7 @@
         android:layout_marginTop="800px" />
 
     <EditText
-        android:id="@+id/securityFirstQuestionAnswerText"
+        android:id="@+id/securityFirstAnswerText"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -96,7 +96,7 @@
         android:layout_marginTop="1050px" />
 
     <TextView
-        android:id="@+id/securitySecondQuestionAnswerTextView"
+        android:id="@+id/securitySecondAnswerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/security_question_answer_2"
@@ -105,7 +105,7 @@
         android:layout_marginTop="1200px"  />
 
     <EditText
-        android:id="@+id/securitySecondQuestionAnswerText"
+        android:id="@+id/securitySecondAnswerText"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -116,10 +116,11 @@
         android:id="@+id/signupButton"
         android:layout_width="600px"
         android:layout_height="200px"
-        android:background="@color/colorGreen"
-        android:text="@string/sign_up_textview"
         android:layout_marginLeft="250px"
-        android:layout_marginTop="1450px"  />
+        android:layout_marginTop="1450px"
+        android:background="@color/colorGreen"
+        android:onClick="signUpButton"
+        android:text="@string/sign_up_textview" />
 
     <TextView
         android:id="@+id/SignupTextView"

@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/userNameTextViews"
+        android:id="@+id/userNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/username_textview"
@@ -51,11 +51,11 @@
         android:id="@+id/nextButton"
         android:layout_width="600px"
         android:layout_height="200px"
-        android:text="@string/next"
         android:layout_marginLeft="250px"
         android:layout_marginTop="1120px"
         android:background="@color/colorGreen"
-        />
+        android:onClick="registerNext"
+        android:text="@string/next" />
 
     <TextView
         android:id="@+id/SignupTextView"
@@ -66,5 +66,4 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200px"
         android:textColor="@color/colorBlack"/>
-
 </RelativeLayout>
