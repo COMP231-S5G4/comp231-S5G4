@@ -34,13 +34,14 @@
         android:layout_marginLeft="100px"
         android:layout_marginTop="400px"/>
 
-    <EditText
-        android:id="@+id/genderText"
+    <Spinner
+        android:id="@+id/genderSpinner"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_below="@id/genderTextView"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="450px" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/securityFirstQuestionTextView"
