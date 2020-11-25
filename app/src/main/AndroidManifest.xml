@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SignUpSecondActivity"></activity>
+        <activity android:name=".SignUpFirstActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +24,7 @@
         <activity
             android:name=".PopUpActivity"
             android:theme="@style/AppTheme.PopUpTheme" />
-        <activity android:name=".ModifyUserProfileActivity">
-
-        </activity>
+        <activity android:name=".ModifyUserProfileActivity" />
     </application>
 
 </manifest>
