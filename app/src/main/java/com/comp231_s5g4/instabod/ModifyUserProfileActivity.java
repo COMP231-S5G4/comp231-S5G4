@@ -76,9 +76,6 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
         }
 
 
-
-
-
         if(height == 0 || height > 250){
             heightEditText.setTextColor(Color.RED);
             if(!isFocused){
