@@ -50,7 +50,6 @@ public class SignUpSecondActivity extends AppCompatActivity {
         genderSpinner.setAdapter(adapter);
 
         dateOfBirthText = (EditText) findViewById(R.id.dateOfBirthText);
-        //genderText = (EditText) findViewById(R.id.genderText);
         securityFirstQuestionText = (EditText) findViewById(R.id.securityFirstQuestionText);
         securityFirstAnswerText = (EditText) findViewById(R.id.securityFirstAnswerText);
         securitySecondQuestionText = (EditText) findViewById(R.id.securitySecondQuestionText);
@@ -59,7 +58,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
 
     //On click Method for the Next Button
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void registerNext(View v) throws ParseException {
+    public void signUpButton(View v) throws ParseException {
 
         dateOfBirthText.setTextColor(Color.BLACK);
         securityFirstQuestionText.setTextColor(Color.BLACK);
@@ -95,11 +94,14 @@ public class SignUpSecondActivity extends AppCompatActivity {
                 // Error Dialog Box
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Ineligible!!!");
-                builder.setMessage("18 years and under cannot sign up");
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+                builder.setMessage("15 years and under cannot sign up").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
                     }
                 });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+                isError=false;
             }
         }
         else{
