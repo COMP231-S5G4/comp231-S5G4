@@ -21,6 +21,12 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private EditText usernameText, passwordText;
     private String username, password;
 
+    private final static String TABLE_NAME = "WorkoutUser";
+    private static final String tableCreatorString =
+            "CREATE TABLE "+ TABLE_NAME + " (username integer primary key, password text, age integer, gender text, securityQuestion1 text, securityAnswer1 text, " +
+                    "securityQuestion2 text, securityAnswer2 text, height numeric, waistCircumference numeric, rfm numeric," +
+                    "pushUpScore integer, sitUpScore integer, frequencyOfExercise integer);";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +35,17 @@ public class SignUpFirstActivity extends AppCompatActivity {
         workoutUserManager= new WorkoutUserManager(this);
         usernameText = (EditText) findViewById(R.id.usernameText);
         passwordText = (EditText) findViewById(R.id.passwordText);
+        try {
+            workoutUserManager = new WorkoutUserManager(this);
+            //create the table
+            workoutUserManager.workoutUserDbInitialize(TABLE_NAME, tableCreatorString);
+        }
+        catch(Exception exception)
+        {
+            Toast.makeText(SignUpFirstActivity.this,
+                    exception.getMessage(), Toast.LENGTH_SHORT).show();
+            Log.i("Error: ",exception.getMessage());
+        }
     }
 
     //On click Method for the Next Button
@@ -56,11 +73,14 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 // Error Dialog Box
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Invalid Password");
-                builder.setMessage("The password must be at least 6 character, one Uppercase, one special character, one number");
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+                builder.setMessage("The password must be at least 6 character, one Uppercase, one special character, one number").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
                     }
                 });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
                 isError=false;
             }
         }
@@ -74,7 +94,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 WorkoutUser wUser = workoutUserManager.getWorkoutUserById(userId, "username");
                 if(wUser==null){
                     SharedPreferences myPreference =
-                            getSharedPreferences("WorkoutUserSharedPreferences", 0);
+                            getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
                     SharedPreferences.Editor prefEditor = myPreference.edit();
                     prefEditor.putInt("userId", userId);
                     prefEditor.putString("username", username);
