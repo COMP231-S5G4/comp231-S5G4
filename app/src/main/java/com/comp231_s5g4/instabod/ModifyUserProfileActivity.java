@@ -66,7 +66,9 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
         }
         catch (Exception e){
             heightEditText.requestFocus();
+            isFocused = true;
             heightEditText.setTextColor(Color.RED);
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -75,7 +77,9 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
         }
         catch(Exception e){
             waistEditText.requestFocus();
+            isFocused = true;
             waistEditText.setTextColor(Color.RED);
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
         try{
@@ -83,7 +87,9 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
         }
         catch (Exception e){
             pushUpScoreEditText.requestFocus();
+            isFocused = true;
             heightEditText.setTextColor(Color.RED);
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
         try{
@@ -91,7 +97,9 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
         }
         catch (Exception e){
             situpScoreEditText.requestFocus();
+            isFocused = true;
             heightEditText.setTextColor(Color.RED);
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
         try{
@@ -100,6 +108,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
         catch(Exception e){
             freqExerciseEditText.requestFocus();
             freqExerciseEditText.setTextColor(Color.RED);
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -113,6 +122,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
                 heightEditText.requestFocus();
                 isFocused = true;
             }
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
         if(waist == 0 || waist > 200){
@@ -121,6 +131,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
                 waistEditText.requestFocus();
                 isFocused = true;
             }
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
         if(pushUps == 0 || pushUps > 150){
@@ -129,6 +140,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
                 pushUpScoreEditText.requestFocus();
                 isFocused = true;
             }
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
         if(sitUpScore == 0 || sitUpScore > 100){
@@ -137,6 +149,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
                 situpScoreEditText.requestFocus();
                 isFocused = true;
             }
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
         if(freqExercise == 0 || freqExercise > 7){
@@ -145,6 +158,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
                 freqExerciseEditText.requestFocus();
                 isFocused = true;
             }
+            Toast.makeText(this, "Invalid Input(s)", Toast.LENGTH_SHORT).show();
             return;
         }
         startActivity(intent);

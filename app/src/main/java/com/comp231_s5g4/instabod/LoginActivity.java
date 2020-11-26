@@ -2,6 +2,8 @@ package com.comp231_s5g4.instabod;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class
+LoginActivity extends AppCompatActivity {
 
 
     EditText UsernameEditText;
@@ -52,6 +55,12 @@ public class LoginActivity extends AppCompatActivity {
                         if(password.equals(workoutUser.getPassword())){
                             // Username & password Valid
                             // TODO - Enter the Shared Preference and move to next activity
+                            SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = shared.edit();
+                            editor.putString("username",username);
+                            editor.putInt("id",convertedUsername);
+                            editor.putString("password",password);
+                            editor.apply();
                             UsernameEditText.setTextColor(Color.BLACK);
                             Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
                         }

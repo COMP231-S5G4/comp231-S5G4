@@ -16,7 +16,7 @@
     <string name="day7_textview">DAY 7</string>
     <string name="day1Name_textview">Name: </string>
     <string name="day1Reps_textview">Reps: </string>
-
+    <string name="sharedpreference">WorkoutUserSharedPreferences</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user_profile_textview">USER PROFILE</string>
