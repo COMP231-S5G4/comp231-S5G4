@@ -82,7 +82,7 @@ public class WorkoutUserManager extends SQLiteOpenHelper {
     fieldName - the  name of the primary key field */
     public WorkoutUser getWorkoutUserById(Object id, String fieldName) throws Exception{
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor =  db.rawQuery( "select * from " + tableName + " where "+ fieldName + "='"+String.valueOf(id)+"'", null );
+        Cursor cursor =  db.rawQuery( "select * from " + tableName + " where "+ fieldName + "="+String.valueOf(id)+"", null );
         WorkoutUser workoutUser= new WorkoutUser();
         if (cursor.moveToFirst()) {
             cursor.moveToFirst();
