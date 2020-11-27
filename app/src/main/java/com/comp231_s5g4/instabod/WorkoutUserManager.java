@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class WorkoutUserManager extends SQLiteOpenHelper {
 
     //database name and version
-    private static final String DATABASE_NAME = "WorkoutUserDB";
+    private static final String DATABASE_NAME = "WorkoutUserDB.db";
     private static final int DATABASE_VERSION = 1;
 
 
