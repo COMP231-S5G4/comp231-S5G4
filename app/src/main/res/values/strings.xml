@@ -48,5 +48,9 @@
     <string name="select_the_second_security_question">Select the Second Security Question</string>
     <string name="security_question_answer_2">Security Question Answer 2</string>
 
+    <string name="new_password">New Password</string>
+    <string name="reset">RESET</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="next_button">NEXT</string>
 
 </resources>
