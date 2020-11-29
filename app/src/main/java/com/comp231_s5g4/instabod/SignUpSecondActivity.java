@@ -75,20 +75,34 @@ public class SignUpSecondActivity extends AppCompatActivity {
             dateOfBirth = dateOfBirthText.getText().toString();
 
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-            Date d = sdf.parse(dateOfBirth);
-            Calendar c = Calendar.getInstance();
-            c.setTime(d);
-            int year = c.get(Calendar.YEAR);
-            int month = c.get(Calendar.MONTH) + 1;
-            int date = c.get(Calendar.DATE);
-            LocalDate l1 = LocalDate.of(year, month, date);
-            LocalDate now1 = LocalDate.now();
-            Period diff1 = Period.between(l1, now1);
+            String user="";
+            String currentDate=sdf.format(new Date());
+            try {
+                user = sdf.format(sdf.parse(dateOfBirth));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            int currentYear = Integer.parseInt(currentDate.substring(0,4));
+            int currentMonth = Integer.parseInt(currentDate.substring(5,7));
+            int currentDay = Integer.parseInt(currentDate.substring(8,10));
+            int birthYear = Integer.parseInt(user.substring(0,4));
+            int birthMonth = Integer.parseInt(dateOfBirth.substring(5,7));
+            int birthDay = Integer.parseInt(dateOfBirth.substring(8,10));
+            int age =currentYear-birthYear;
 
-            if(diff1.getYears() >= 15)
+            if(currentMonth<birthMonth){
+                age--;
+            }
+            else{
+                if(currentDay < birthDay){
+                    age--;
+                }
+            }
+
+            if(age >= 15)
             {
                 //Setting the age
-                age = diff1.getYears();
+                this.age = age;
             }
             else{
                 // Error Dialog Box
