@@ -30,7 +30,7 @@
         android:layout_below="@id/ageTextview"
         />
     <TextView
-        android:id="@+id/heightTextview"
+        android:id="@+id/listHeightTextview"
         android:text="Height:"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         />
 
     <TextView
-        android:id="@+id/waistTextview"
+        android:id="@+id/listWaistTextview"
         android:text="Waist:"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
