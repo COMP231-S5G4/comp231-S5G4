@@ -12,9 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static java.lang.System.exit;
+
 public class
 LoginActivity extends AppCompatActivity {
-
 
     EditText UsernameEditText;
     EditText PasswordEditText;
@@ -48,7 +49,6 @@ LoginActivity extends AppCompatActivity {
                 }
                 if(isError){
                     int convertedUsername=WorkoutUser.convertUsernameToUniqueId(username);
-                    Toast.makeText(getApplicationContext(),"converted User:"+convertedUsername,Toast.LENGTH_LONG).show();
                     try {
                         workoutUser=db.getWorkoutUserById(convertedUsername,"username");
                     } catch (Exception e) {
@@ -56,13 +56,11 @@ LoginActivity extends AppCompatActivity {
                     }
                     if(workoutUser==null){
                         UsernameEditText.setTextColor(Color.RED);
-                        //Toast.makeText(getApplicationContext(),"Invalid Username or Password",Toast.LENGTH_LONG).show();
-                        Toast.makeText(getApplicationContext(),"null user",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"User does not Exists",Toast.LENGTH_LONG).show();
                     }
                     else{
                         if(password.equals(workoutUser.getPassword())){
                             // Username & password Valid
-                            // TODO - Enter the Shared Preference and move to next activity
                             SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = shared.edit();
                             editor.putString("username",username);
@@ -70,7 +68,6 @@ LoginActivity extends AppCompatActivity {
                             editor.putString("password",password);
                             editor.apply();
                             UsernameEditText.setTextColor(Color.BLACK);
-                            //Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
                             startActivity(new Intent(getApplicationContext(),WorkoutPlanActivity.class));
                         }
                         else{
@@ -91,5 +88,19 @@ LoginActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        finish();
+    }
+    public void forgotPassword(View view)
+    {
+        startActivity(new Intent(getApplicationContext(),ForgotPasswordActivity.class));
+    }
+    public void signUp(View view)
+    {
+        startActivity(new Intent(getApplicationContext(),SignUpFirstActivity.class));
     }
 }

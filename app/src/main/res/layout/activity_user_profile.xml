@@ -22,7 +22,7 @@
         android:layout_marginLeft="100px"
         android:layout_marginTop="250px"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/waistTextView"
@@ -41,7 +41,7 @@
         android:layout_marginLeft="100px"
         android:layout_marginTop="450px"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/pushupTextView"

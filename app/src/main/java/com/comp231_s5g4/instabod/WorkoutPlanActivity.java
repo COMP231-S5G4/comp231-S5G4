@@ -257,7 +257,10 @@ public class WorkoutPlanActivity extends AppCompatActivity {
         intent.putExtra("workout3HyperLink", workout3.getVideoHyperlink());
         startActivity(intent);
     }
-
+    public void userProfile(View v){
+        Intent intent = new Intent(this, ModifyUserProfileActivity.class);
+        startActivity(intent);
+    }
     public void logout(View v){
         SharedPreferences sharedPreferences = getSharedPreferences("WorkoutUserSharedPreferences", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
