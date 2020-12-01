@@ -6,7 +6,6 @@
     android:background="@color/colorGray"
     tools:context=".FitnessInformationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/fitnessinformation_textview"
         android:layout_width="wrap_content"
@@ -28,6 +27,17 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/rfmValue_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="60dp"
+        android:hint="RFM Score"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/pushup_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,12 +48,34 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/pushupScore_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="90dp"
+        android:textColor="@color/colorBlack"
+        android:hint="Push Score"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/situps_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="120dp"
         android:text="@string/situps_textview"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/situpScore_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/colorBlack"
+        android:hint="SitUp Score"
         android:textSize="14sp"
         android:textStyle="bold" />
 
