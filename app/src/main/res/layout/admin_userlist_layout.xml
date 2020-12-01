@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/userNameTextview"
+        android:text="Username:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/ageTextview"
+        android:text="Age:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/userNameTextview"
+        />
+    <TextView
+        android:id="@+id/genderTextview"
+        android:text="Gender:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ageTextview"
+        />
+    <TextView
+        android:id="@+id/heightTextview"
+        android:text="Height:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/genderTextview"
+        />
+
+    <TextView
+        android:id="@+id/waistTextview"
+        android:text="Waist:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rfmTextview"
+        android:text="RFM:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/userNameTextview"
+        />
+    <TextView
+        android:id="@+id/situpScoreTextview"
+        android:text="SitUp Score:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ageTextview"
+        />
+    <TextView
+        android:id="@+id/pushupScoreTextview"
+        android:text="PushUpScore:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/genderTextview"
+        />
+
+
+</RelativeLayout>
