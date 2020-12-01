@@ -99,9 +99,19 @@ public class ForgotPasswordTwoActivity extends AppCompatActivity {
                 WorkoutUser wUser = workoutUserManager.getWorkoutUserById(userID, "username");
                 if(securityFirstAnswer.equals(wUser.getSecurityA1()) &&
                         securitySecondAnswer.equals(wUser.getSecurityA2())){
-                    /*
-                    * The update logic will go here
-                    * */
+                    ContentValues cv=new ContentValues();
+                    cv.put("password",enteredPassword);
+                    workoutUserManager.updateWorkoutUserRow(userID,"username",cv);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setTitle("Reset Password Successful");
+                    builder.setMessage("Your password is changed successfully");
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                        }
+                    });
+                    AlertDialog alertDialog = builder.create();
+                    alertDialog.show();
                     //Toast.makeText(getApplicationContext(),"The answers are correct",Toast.LENGTH_LONG).show();
                 }
                 else{
