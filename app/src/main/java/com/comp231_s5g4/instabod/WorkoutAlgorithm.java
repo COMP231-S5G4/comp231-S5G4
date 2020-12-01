@@ -1,22 +1,27 @@
 package com.comp231_s5g4.instabod;
 
+
 import java.util.ArrayList;
 
 public class WorkoutAlgorithm {
     public ArrayList<Workout> weeklyWorkouts;
     InstabodWorkouts workouts;
-    private int RFM,age,gender;
-
-    public WorkoutAlgorithm(int RFM, int age,int gender) {
+    private int age,gender;
+    private double RFM;
+    public WorkoutAlgorithm(double RFM, int age,int gender) {
         this.RFM = RFM;
         this.age = age;
         this.gender = gender;
+
+        workouts = new InstabodWorkouts();
+        weeklyWorkouts = new ArrayList<Workout>();
     }
     //Temporary age is integer where 1 = male and 0 = female
     WorkoutAlgorithm(){
-        RFM=18;
-        age = 20;
+        RFM=20;
+        age = 35;
         gender = 1;
+
         workouts = new InstabodWorkouts();
         weeklyWorkouts = new ArrayList<Workout>();
     }
