@@ -104,7 +104,7 @@ public class ForgotPasswordTwoActivity extends AppCompatActivity {
                     workoutUserManager.updateWorkoutUserRow(userID,"username",cv);
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("Reset Password Successful");
-                    builder.setMessage("Your password has been successfully changed");
+                    builder.setMessage("Your password is changed successfully");
                     builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
