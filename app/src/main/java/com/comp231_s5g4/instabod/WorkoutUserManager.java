@@ -6,25 +6,21 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.logging.Logger;
+
+import static androidx.constraintlayout.motion.utils.Oscillator.TAG;
+
 public class WorkoutUserManager extends SQLiteOpenHelper {
 
     //database name and version
-    private static final String DATABASE_NAME = "WorkoutUserDB";
+    private static final String DATABASE_NAME = "WorkoutUserDB.db";
     private static final int DATABASE_VERSION = 1;
 
 
     // should be set from within main activity
     private static String tableName;
     private static String tableCreatorString;
-
-
-    //The following Table_Name and the TableCreatorString String needs to be called inside the Activity
-    //private final static String TABLE_NAME = "WorkoutUser";
-    /*private static final String tableCreatorString =
-            "CREATE TABLE "+ TABLE_NAME + " (username integer primary key, password text, age integer, gender text, securityQuestion1 text, securityAnswer1 text, " +
-                    "securityQuestion2 text, securityAnswer2 text, height numeric, waistCircumference numeric, rfm numeric," +
-                    "pushUpScore integer, sitUpScore integer, frequencyOfExercise integer);";
-     */
 
 
     public WorkoutUserManager(Context context)
@@ -82,7 +78,7 @@ public class WorkoutUserManager extends SQLiteOpenHelper {
     fieldName - the  name of the primary key field */
     public WorkoutUser getWorkoutUserById(Object id, String fieldName) throws Exception{
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor =  db.rawQuery( "select * from " + tableName + " where "+ fieldName + "='"+String.valueOf(id)+"'", null );
+        Cursor cursor =  db.rawQuery( "select * from " + tableName + " where "+ fieldName + "="+String.valueOf(id)+"", null );
         WorkoutUser workoutUser= new WorkoutUser();
         if (cursor.moveToFirst()) {
             cursor.moveToFirst();
@@ -119,5 +115,45 @@ public class WorkoutUserManager extends SQLiteOpenHelper {
         //
         int nr = db.update(tableName, values, fieldName + " = ? ", new String[]{String.valueOf(id)});
         return nr > 0;
+    }
+
+
+    /* The following method is for getting the list of all the records
+    *  in our WorkoutUser table */
+    public ArrayList<WorkoutUser> getAllRecords() {
+        ArrayList<WorkoutUser> workoutUserArrayList = new ArrayList<>();
+        String selectQuery = "SELECT  * FROM " + tableName;
+        SQLiteDatabase db = this.getReadableDatabase();
+        try {
+            Cursor cursor = db.rawQuery(selectQuery, null);
+            try {
+                if (cursor.moveToFirst()) {
+                    do {
+                        WorkoutUser workoutUser = new WorkoutUser();
+                        workoutUser.setUserName(cursor.getInt(0));
+                        workoutUser.setPassword(cursor.getString(1));
+                        workoutUser.setAge(cursor.getInt(2));
+                        workoutUser.setGender(cursor.getString(3));
+                        workoutUser.setSecurityQ1(cursor.getString(4));
+                        workoutUser.setSecurityA1(cursor.getString(5));
+                        workoutUser.setSecurityQ2(cursor.getString(6));
+                        workoutUser.setSecurityA2(cursor.getString(7));
+                        workoutUser.setHeight(cursor.getDouble(8));
+                        workoutUser.setWaistCircumference(cursor.getDouble(9));
+                        workoutUser.setRfm(cursor.getInt(10));
+                        workoutUser.setPushUpScore(cursor.getInt(11));
+                        workoutUser.setSitUpScore(cursor.getInt(12));
+                        workoutUser.setFrequencyOfExercise(cursor.getInt(13));
+                        workoutUserArrayList.add(workoutUser);
+                    } while (cursor.moveToNext());
+                }
+            } finally {
+                try { cursor.close(); } catch (Exception ignore) {}
+            }
+
+        } finally {
+            try { db.close(); } catch (Exception ignore) {}
+        }
+        return workoutUserArrayList;
     }
 }

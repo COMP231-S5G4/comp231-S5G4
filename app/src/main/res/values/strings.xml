@@ -16,7 +16,7 @@
     <string name="day7_textview">DAY 7</string>
     <string name="day1Name_textview">Name: </string>
     <string name="day1Reps_textview">Reps: </string>
-
+    <string name="sharedpreference">WorkoutUserSharedPreferences</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user_profile_textview">USER PROFILE</string>
@@ -33,5 +33,27 @@
 
     <string name="modify_button">MODIFY</string>
     <string name="modify_user_profile_textview">MODIFY USER PROFILE</string>
+
+    <string name="login_textview">LOG IN</string>
+    <string name="username_textview">Enter Username</string>
+    <string name="enter_password_textview">Enter Password</string>
+    <string name="sign_up_textview">Sign Up</string>
+    <string name="forgot_password_textview">Forgot Password?</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="next">Next</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="security_question_1">Security Question 1</string>
+    <string name="select_the_first_security_question">Select the First Security Question</string>
+    <string name="security_question_answer_1">Security Question Answer 1</string>
+    <string name="security_question_2">Security Question 2</string>
+    <string name="select_the_second_security_question">Select the Second Security Question</string>
+    <string name="security_question_answer_2">Security Question Answer 2</string>
+
+    <string name="new_password">New Password</string>
+    <string name="reset">RESET</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="next_button">NEXT</string>
 
 </resources>
