@@ -9,10 +9,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
@@ -27,7 +24,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modify_user_profile);
-        heightEditText = findViewById(R.id.editHeightText);
+        heightEditText = findViewById(R.id.searchEditText);
         waistEditText = findViewById(R.id.editWaistText);
         pushUpScoreEditText = findViewById(R.id.editPushupText);
         sitUpScoreEditText = findViewById(R.id.situpEditText);

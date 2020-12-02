@@ -30,14 +30,13 @@
       android:textStyle="bold" />
 
   <EditText
-      android:id="@+id/editHeightText"
+      android:id="@+id/searchEditText"
       android:layout_width="335dp"
       android:layout_height="wrap_content"
       android:layout_marginLeft="100px"
       android:layout_marginTop="250px"
       android:ems="10"
-      android:hint="Search Username"
-      android:inputType="number" />
+      android:hint="Search Username" />
 
   <Button
       android:id="@+id/search_button"
@@ -46,6 +45,7 @@
       android:layout_marginLeft="40dp"
       android:layout_marginTop="160dp"
       android:background="@color/colorGreen"
+      android:onClick="search"
       android:text="@string/searchButton_textview"
       android:textSize="12sp" />
 
