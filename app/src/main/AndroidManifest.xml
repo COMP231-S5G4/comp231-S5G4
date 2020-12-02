@@ -9,6 +9,7 @@ package="com.comp231_s5g4.instabod">
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ForgotPasswordTwoActivity"/>
+        <activity android:name=".AdminHomePage"/>
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".SignUpSecondActivity" />
         <activity android:name=".SignUpFirstActivity"/>

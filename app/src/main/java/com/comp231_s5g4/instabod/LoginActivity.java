@@ -47,28 +47,32 @@ LoginActivity extends AppCompatActivity {
                 if(username.equals("") || password.equals("")){
                     isError=false;
                 }
-                if(isError){
-                    int convertedUsername=WorkoutUser.convertUsernameToUniqueId(username);
-                    try {
-                        workoutUser=db.getWorkoutUserById(convertedUsername,"username");
-                    } catch (Exception e) {
-                        e.printStackTrace();
+
+                if(isError)
+                {
+                    if(password.equals("Snowflake@69420") && username.equals("superSU")){
+                        SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = shared.edit();
+                        editor.putString("username",username);
+                        editor.putString("password",password);
+                        editor.apply();
+                        UsernameEditText.setTextColor(Color.BLACK);
+                        startActivity(new Intent(getApplicationContext(),AdminHomePage.class));
                     }
-                    if(workoutUser==null){
-                        UsernameEditText.setTextColor(Color.RED);
-                        Toast.makeText(getApplicationContext(),"User does not Exists",Toast.LENGTH_LONG).show();
-                    }
-                    else{
-                        if(password.equals("SpecialPerson@1234") && username.equals("superuser")){
-                            SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = shared.edit();
-                            editor.putString("username",username);
-                            editor.putInt("id",convertedUsername);
-                            editor.putString("password",password);
-                            editor.apply();
-                            UsernameEditText.setTextColor(Color.BLACK);
-                            startActivity(new Intent(getApplicationContext(),AdminHomePage.class));
+                    else
+                    {
+                        int convertedUsername=WorkoutUser.convertUsernameToUniqueId(username);
+                        try {
+                            workoutUser=db.getWorkoutUserById(convertedUsername,"username");
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
+                        if(workoutUser==null)
+                        {
+                            UsernameEditText.setTextColor(Color.RED);
+                            Toast.makeText(getApplicationContext(),"User does not Exists",Toast.LENGTH_LONG).show();
+                        }
+
                         else if(password.equals(workoutUser.getPassword())){
                             // Username & password Valid
                             SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
@@ -80,18 +84,21 @@ LoginActivity extends AppCompatActivity {
                             UsernameEditText.setTextColor(Color.BLACK);
                             startActivity(new Intent(getApplicationContext(),WorkoutPlanActivity.class));
                         }
-                        else{
+                        else
+                            {
                             UsernameEditText.setTextColor(Color.RED);
                             Toast.makeText(getApplicationContext(),"Invalid Username or Password",Toast.LENGTH_LONG).show();
                         }
                     }
                 }
                 else{
-                    if(username.equals("")){
+                    if(username.equals(""))
+                    {
                         UsernameEditText.requestFocus();
                         Toast.makeText(getApplicationContext(),"Please Enter your username",Toast.LENGTH_LONG).show();
                     }
-                    else if(password.equals("")){
+                    else if(password.equals(""))
+                    {
                         PasswordEditText.requestFocus();
                         Toast.makeText(getApplicationContext(),"Please Enter your password",Toast.LENGTH_LONG).show();
                     }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="logout"
     tools:context=".AdminHomePage">
 
   <Button
@@ -15,6 +15,7 @@
       android:layout_marginTop="5dp"
       android:layout_marginRight="10dp"
       android:background="@color/colorGreen"
+      android:onClick="logout"
       android:text="@string/logout_button"
       android:textSize="12sp" />
 
@@ -34,8 +35,8 @@
       android:layout_height="wrap_content"
       android:layout_marginLeft="100px"
       android:layout_marginTop="250px"
-      android:hint="Search Username"
       android:ems="10"
+      android:hint="Search Username"
       android:inputType="number" />
 
   <Button
@@ -59,20 +60,19 @@
       android:text="@string/resetButton_textview"
       android:textSize="12sp" />
 
-<ScrollView
+  <ScrollView
 
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:layout_marginTop="260dp"
-    android:fillViewport="true"
-
-    >
-  <ListView
-      android:id="@+id/workout_user_list"
-      android:layout_height="wrap_content"
       android:layout_width="match_parent"
-      >
-  </ListView>>
-</ScrollView>
+      android:layout_height="match_parent"
+      android:layout_marginTop="260dp"
+      android:fillViewport="true"
 
-  </RelativeLayout>
+      >
+
+    <ListView
+        android:id="@+id/workout_user_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>>
+  </ScrollView>
+
+</RelativeLayout>
