@@ -57,6 +57,7 @@
       android:layout_marginLeft="210dp"
       android:layout_marginTop="160dp"
       android:background="@color/colorGreen"
+      android:onClick="reset"
       android:text="@string/resetButton_textview"
       android:textSize="12sp" />
 

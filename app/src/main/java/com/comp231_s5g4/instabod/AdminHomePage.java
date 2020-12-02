@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class AdminHomePage extends AppCompatActivity
 {
     ListView workoutUserList;
+    EditText searchEditText;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -24,7 +25,7 @@ public class AdminHomePage extends AppCompatActivity
     }
 
     public void search(View v){
-        EditText searchEditText = findViewById(R.id.searchEditText);
+        searchEditText = findViewById(R.id.searchEditText);
         int id = WorkoutUser.convertUsernameToUniqueId(searchEditText.getText().toString());
         WorkoutUserManager db = new WorkoutUserManager(this);
         WorkoutUser userList = new WorkoutUser();
@@ -54,6 +55,11 @@ public class AdminHomePage extends AppCompatActivity
         editor.remove("id");
         editor.apply();
         Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void reset(View v){
+        Intent intent = new Intent(this, AdminHomePage.class);
         startActivity(intent);
     }
 }
