@@ -59,7 +59,7 @@ LoginActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"User does not Exists",Toast.LENGTH_LONG).show();
                     }
                     else{
-                        if(password.equals("vi2!QF^V9&3XOB1") && username.equals("admin")){
+                        if(password.equals("specialperson@1234") && username.equals("superuser")){
                             SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = shared.edit();
                             editor.putString("username",username);
