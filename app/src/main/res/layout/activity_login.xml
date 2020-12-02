@@ -40,11 +40,11 @@
         android:id="@+id/forgotTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/forgot_password_textview"
         android:layout_marginLeft="100px"
         android:layout_marginTop="800px"
-        android:textColor="@color/colorBlack"
-        />
+        android:onClick="forgotPassword"
+        android:text="@string/forgot_password_textview"
+        android:textColor="@color/colorGreen" />
     <EditText
         android:id="@+id/editWaistText"
         android:layout_width="335dp"
@@ -71,6 +71,7 @@
         android:text="@string/sign_up_textview"
         android:layout_marginLeft="250px"
         android:layout_marginTop="1120px"
+        android:onClick="signUp"
         android:background="@color/colorGreen"
         />
 

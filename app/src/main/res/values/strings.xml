@@ -27,6 +27,9 @@
     <string name="pushup_textview">Push up Score</string>
     <string name="waist_textview">Waist Circumference</string>
     <string name="height_textview">Height</string>
+    <string name="adminPage_textview">ADMIN HOME PAGE</string>
+    <string name="searchButton_textview">SEARCH</string>
+    <string name="resetButton_textview">RESET</string>
 
     <string name="modify_button">MODIFY</string>
     <string name="modify_user_profile_textview">MODIFY USER PROFILE</string>
@@ -48,5 +51,9 @@
     <string name="select_the_second_security_question">Select the Second Security Question</string>
     <string name="security_question_answer_2">Security Question Answer 2</string>
 
+    <string name="new_password">New Password</string>
+    <string name="reset">RESET</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="next_button">NEXT</string>
 
 </resources>

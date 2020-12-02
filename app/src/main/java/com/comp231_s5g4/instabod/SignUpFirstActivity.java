@@ -96,6 +96,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                     SharedPreferences myPreference =
                             getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
                     SharedPreferences.Editor prefEditor = myPreference.edit();
+                    prefEditor.clear();
                     prefEditor.putInt("userId", userId);
                     prefEditor.putString("username", username);
                     prefEditor.putString("password", password);
@@ -113,6 +114,9 @@ public class SignUpFirstActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int id) {
                         }
                     });
+                    AlertDialog alertDialog = builder.create();
+                    alertDialog.show();
+                    isError=false;
                 }
             }
             catch (Exception exception)

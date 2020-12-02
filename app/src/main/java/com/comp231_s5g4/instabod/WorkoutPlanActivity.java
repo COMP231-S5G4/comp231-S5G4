@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,9 @@ public class WorkoutPlanActivity extends AppCompatActivity {
     Workout[] day5;
     Workout[] day6;
     Workout[] day7;
+
+    WorkoutUserManager db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -33,8 +37,31 @@ public class WorkoutPlanActivity extends AppCompatActivity {
         day5 = new Workout[3];
         day6 = new Workout[3];
         day7 = new Workout[3];
-        WorkoutAlgorithm workoutAlgorithm = new WorkoutAlgorithm();
+
+        db= new WorkoutUserManager(getApplicationContext());
+
+        SharedPreferences sharedPreferences = getSharedPreferences("WorkoutUserSharedPreferences",MODE_PRIVATE);
+        int userId = sharedPreferences.getInt("id",-1);
+        int tempGender = 1;
+        WorkoutUser workoutUser = new WorkoutUser();
+
+        try {
+            workoutUser = db.getWorkoutUserById(userId,"username");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if(workoutUser.getGender().equals("Male")){
+            tempGender = 1;
+        }
+        else{
+            tempGender = 0;
+        }
+        Toast.makeText(getApplicationContext(),""+workoutUser.getRfm(),Toast.LENGTH_LONG).show();
+
+        WorkoutAlgorithm workoutAlgorithm = new WorkoutAlgorithm(workoutUser.getRfm(),workoutUser.getAge(),tempGender);
         workouts = workoutAlgorithm.generateWorkout();
+
         //day1
         int pos = 0;
         for(int i = 0; i < 3; i++){
@@ -257,7 +284,10 @@ public class WorkoutPlanActivity extends AppCompatActivity {
         intent.putExtra("workout3HyperLink", workout3.getVideoHyperlink());
         startActivity(intent);
     }
-
+    public void userProfile(View v){
+        Intent intent = new Intent(this, ModifyUserProfileActivity.class);
+        startActivity(intent);
+    }
     public void logout(View v){
         SharedPreferences sharedPreferences = getSharedPreferences("WorkoutUserSharedPreferences", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

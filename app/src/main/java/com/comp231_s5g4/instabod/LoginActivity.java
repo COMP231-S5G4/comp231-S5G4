@@ -3,6 +3,7 @@ package com.comp231_s5g4.instabod;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,14 +12,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static java.lang.System.exit;
+
 public class
 LoginActivity extends AppCompatActivity {
-
 
     EditText UsernameEditText;
     EditText PasswordEditText;
     Button LoginButton;
-
+    private final static String TABLE_NAME = "WorkoutUser";
+    private static final String tableCreatorString =
+            "CREATE TABLE "+ TABLE_NAME + " (username integer primary key, password text, age integer, gender text, securityQuestion1 text, securityAnswer1 text, " +
+                    "securityQuestion2 text, securityAnswer2 text, height numeric, waistCircumference numeric, rfm numeric," +
+                    "pushUpScore integer, sitUpScore integer, frequencyOfExercise integer);";
     WorkoutUserManager db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,7 @@ LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         db= new WorkoutUserManager(getApplicationContext());
+        db.workoutUserDbInitialize(TABLE_NAME,tableCreatorString);
 
         LoginButton = findViewById(R.id.loginButton);
         UsernameEditText = findViewById(R.id.usernameText);
@@ -49,12 +56,11 @@ LoginActivity extends AppCompatActivity {
                     }
                     if(workoutUser==null){
                         UsernameEditText.setTextColor(Color.RED);
-                        Toast.makeText(getApplicationContext(),"Invalid Username or Password",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"User does not Exists",Toast.LENGTH_LONG).show();
                     }
                     else{
                         if(password.equals(workoutUser.getPassword())){
                             // Username & password Valid
-                            // TODO - Enter the Shared Preference and move to next activity
                             SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = shared.edit();
                             editor.putString("username",username);
@@ -62,7 +68,7 @@ LoginActivity extends AppCompatActivity {
                             editor.putString("password",password);
                             editor.apply();
                             UsernameEditText.setTextColor(Color.BLACK);
-                            Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(getApplicationContext(),WorkoutPlanActivity.class));
                         }
                         else{
                             UsernameEditText.setTextColor(Color.RED);
@@ -82,5 +88,19 @@ LoginActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        finish();
+    }
+    public void forgotPassword(View view)
+    {
+        startActivity(new Intent(getApplicationContext(),ForgotPasswordActivity.class));
+    }
+    public void signUp(View view)
+    {
+        startActivity(new Intent(getApplicationContext(),SignUpFirstActivity.class));
     }
 }
