@@ -21,6 +21,10 @@ public class AdminHomePage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home_page);
         workoutUserList = findViewById(R.id.workout_user_list);
+        WorkoutUserManager db = new WorkoutUserManager(this);
+        ArrayList<WorkoutUser> userlist=db.getAllRecords();
+        AdminListAdapter adapter = new AdminListAdapter(this,R.layout.admin_userlist_layout, userlist);
+        workoutUserList.setAdapter(adapter);
     }
 
     public void search(View v){
