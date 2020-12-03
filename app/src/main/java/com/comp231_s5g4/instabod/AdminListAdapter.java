@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminListAdapter extends ArrayAdapter<WorkoutUser>
@@ -18,7 +19,7 @@ public class AdminListAdapter extends ArrayAdapter<WorkoutUser>
     Context context;
     int resource;
 
-    public AdminListAdapter(@NonNull Context context, int resource, @NonNull List<WorkoutUser> objects)
+    public AdminListAdapter(@NonNull Context context, int resource, @NonNull ArrayList<WorkoutUser> objects)
     {
 
         super(context, resource, objects);

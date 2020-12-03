@@ -7,12 +7,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -30,7 +27,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
         db= new WorkoutUserManager(getApplicationContext());
 
-        editHeightTextView= findViewById(R.id.editHeightText);
+        editHeightTextView= findViewById(R.id.searchEditText);
         editWaistText = findViewById(R.id.editWaistText);
         editPushupText = findViewById(R.id.editPushupText);
         situpEditText = findViewById(R.id.situpEditText);

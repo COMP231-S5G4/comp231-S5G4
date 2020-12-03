@@ -16,7 +16,7 @@
         android:textColor="@color/colorBlack" />
 
     <EditText
-        android:id="@+id/editHeightText"
+        android:id="@+id/searchEditText"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100px"
