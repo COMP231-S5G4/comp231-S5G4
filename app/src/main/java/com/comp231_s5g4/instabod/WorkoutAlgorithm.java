@@ -38,7 +38,7 @@ public class WorkoutAlgorithm {
         if(gender == 1){
             tempGender = "Male";
             if(age >= 60){
-                if(RFM>=2 && RFM<= 5){
+                if(RFM>=2 && RFM<= 5.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -47,7 +47,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM>= 6 && RFM <= 13){
+                else if(RFM>= 6 && RFM <= 13.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -56,7 +56,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=14 && RFM <=17){
+                else if(RFM >=14 && RFM <=17.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -65,7 +65,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=18 && RFM <=24){
+                else if(RFM >=18 && RFM <=24.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -85,7 +85,7 @@ public class WorkoutAlgorithm {
                 }
             }
             else if(age >= 30){
-                if(RFM>=2 && RFM<= 5){
+                if(RFM>=2 && RFM<= 5.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -94,7 +94,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM>= 6 && RFM <= 13){
+                else if(RFM>= 6 && RFM <= 13.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -103,7 +103,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=14 && RFM <=17){
+                else if(RFM >=14 && RFM <=17.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -112,7 +112,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=18 && RFM <=24){
+                else if(RFM >=18 && RFM <=24.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -132,7 +132,7 @@ public class WorkoutAlgorithm {
                 }
             }
             else{
-                if(RFM>=2 && RFM<= 5){
+                if(RFM>=2 && RFM<= 5.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -141,7 +141,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM>= 6 && RFM <= 13){
+                else if(RFM>= 6 && RFM <= 13.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -150,7 +150,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=14 && RFM <=17){
+                else if(RFM >=14 && RFM <=17.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -159,7 +159,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=18 && RFM <=24){
+                else if(RFM >=18 && RFM <=24.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -182,7 +182,7 @@ public class WorkoutAlgorithm {
         else if(gender == 0){
             tempGender = "Female";
             if(age >= 60){
-                if(RFM>=10 && RFM<= 13){
+                if(RFM>=10 && RFM<= 13.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -191,7 +191,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM>= 14 && RFM <= 20){
+                else if(RFM>= 14 && RFM <= 20.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -200,7 +200,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=21 && RFM <=24){
+                else if(RFM >=21 && RFM <=24.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -209,7 +209,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=25 && RFM <=31){
+                else if(RFM >=25 && RFM <=31.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -229,7 +229,7 @@ public class WorkoutAlgorithm {
                 }
             }
             else if(age >= 30){
-                if(RFM>=10 && RFM<= 13){
+                if(RFM>=10 && RFM<= 13.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -238,7 +238,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM>= 14 && RFM <= 20){
+                else if(RFM>= 14 && RFM <= 20.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -247,7 +247,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=21 && RFM <=24){
+                else if(RFM >=21 && RFM <=24.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -256,7 +256,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=25 && RFM <=31){
+                else if(RFM >=25 && RFM <=31.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -276,7 +276,7 @@ public class WorkoutAlgorithm {
                 }
             }
             else{
-                if(RFM>=10 && RFM<= 13){
+                if(RFM>=10 && RFM<= 13.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -285,7 +285,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM>= 14 && RFM <= 20){
+                else if(RFM>= 14 && RFM <= 20.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -294,7 +294,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=21 && RFM <=24){
+                else if(RFM >=21 && RFM <=24.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
@@ -303,7 +303,7 @@ public class WorkoutAlgorithm {
                         }
                     }
                 }
-                else if(RFM >=25 && RFM <=31){
+                else if(RFM >=25 && RFM <=31.99){
                     for (Workout data:workouts.workoutList) {
                         tempAge = data.getAge();
                         tempRFM = data.getRfm();
