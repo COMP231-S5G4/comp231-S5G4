@@ -4,27 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="logout"
     tools:context=".AdminHomePage">
-
-  <Button
-      android:id="@+id/logout_button"
-      android:layout_width="wrap_content"
-      android:layout_height="35dp"
-      android:layout_marginStart="320dp"
-      android:layout_marginTop="5dp"
-      android:layout_marginRight="10dp"
-      android:background="@color/colorGreen"
-      android:onClick="logout"
-      android:text="@string/logout_button"
-      android:textSize="12sp" />
 
   <TextView
       android:id="@+id/workout_textview"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginLeft="105dp"
-      android:layout_marginTop="60dp"
+      android:layout_marginTop="40dp"
       android:text="@string/adminPage_textview"
       android:textSize="24sp"
       android:textStyle="bold" />
@@ -34,7 +21,7 @@
       android:layout_width="335dp"
       android:layout_height="wrap_content"
       android:layout_marginLeft="100px"
-      android:layout_marginTop="250px"
+      android:layout_marginTop="230px"
       android:ems="10"
       android:hint="Search Username" />
 
@@ -43,10 +30,11 @@
       android:layout_width="135dp"
       android:layout_height="36dp"
       android:layout_marginLeft="40dp"
-      android:layout_marginTop="160dp"
+      android:layout_marginTop="150dp"
       android:background="@color/colorGreen"
       android:onClick="search"
       android:text="@string/searchButton_textview"
+      android:textColor="@android:color/white"
       android:textSize="12sp" />
 
 
@@ -55,16 +43,17 @@
       android:layout_width="135dp"
       android:layout_height="36dp"
       android:layout_marginLeft="210dp"
-      android:layout_marginTop="160dp"
+      android:layout_marginTop="150dp"
       android:background="@color/colorGreen"
+      android:onClick="reset"
       android:text="@string/resetButton_textview"
+      android:textColor="@android:color/white"
       android:textSize="12sp" />
 
   <ScrollView
-
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_marginTop="260dp"
+      android:layout_marginTop="220dp"
       android:fillViewport="true"
 
       >
@@ -72,7 +61,7 @@
     <ListView
         android:id="@+id/workout_user_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>>
+        android:layout_height="wrap_content" />
   </ScrollView>
 
 </RelativeLayout>

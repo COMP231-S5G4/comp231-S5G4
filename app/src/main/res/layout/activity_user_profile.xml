@@ -10,9 +10,9 @@
         android:id="@+id/heightTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/height_textview"
         android:layout_marginLeft="100px"
         android:layout_marginTop="200px"
+        android:text="@string/height_textview"
         android:textColor="@color/colorBlack" />
 
     <EditText
@@ -28,11 +28,10 @@
         android:id="@+id/waistTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/waist_textview"
         android:layout_marginLeft="100px"
         android:layout_marginTop="400px"
-        android:textColor="@color/colorBlack"
-        />
+        android:text="@string/waist_textview"
+        android:textColor="@color/colorBlack" />
 
     <EditText
         android:id="@+id/editWaistText"
@@ -47,9 +46,9 @@
         android:id="@+id/pushupTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pushup_textview"
         android:layout_marginLeft="100px"
         android:layout_marginTop="600px"
+        android:text="@string/pushup_textview"
         android:textColor="@color/colorBlack"
 
         />
@@ -58,10 +57,10 @@
         android:id="@+id/tutorialTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tutorial_textview"
         android:layout_marginLeft="600px"
         android:layout_marginTop="600px"
-        android:textColor="@color/colorPrimary"/>
+        android:text="@string/tutorial_textview"
+        android:textColor="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/editPushupText"
@@ -76,19 +75,19 @@
         android:id="@+id/situpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/situp_textview"
         android:layout_marginLeft="100px"
         android:layout_marginTop="800px"
-        android:textColor="@color/colorBlack"/>
+        android:text="@string/situp_textview"
+        android:textColor="@color/colorBlack" />
 
     <TextView
         android:id="@+id/tutorial2TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tutorial_textview"
         android:layout_marginLeft="600px"
         android:layout_marginTop="800px"
-        android:textColor="@color/colorPrimary"/>
+        android:text="@string/tutorial_textview"
+        android:textColor="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/situpEditText"
@@ -103,10 +102,10 @@
         android:id="@+id/frequencyTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/frequency_textview"
         android:layout_marginLeft="100px"
         android:layout_marginTop="1000px"
-        android:textColor="@color/colorBlack"/>
+        android:text="@string/frequency_textview"
+        android:textColor="@color/colorBlack" />
 
     <EditText
         android:id="@+id/frequencyEditText"
@@ -128,20 +127,21 @@
         android:id="@+id/submitButton"
         android:layout_width="600px"
         android:layout_height="200px"
-        android:text="@string/submit_button"
-    android:layout_marginLeft="250px"
-    android:layout_marginTop="1250px"
+        android:layout_marginLeft="250px"
+        android:layout_marginTop="1250px"
         android:background="@color/colorGreen"
-    />
+        android:text="@string/submit_button"
+        android:textColor="@android:color/white"
+        android:textSize="25dp" />
 
     <TextView
         android:id="@+id/userProfileTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/user_profile_textview"
-        android:textSize="80px"
         android:layout_marginLeft="280px"
         android:layout_marginTop="30px"
-        android:textColor="@color/colorBlack"/>
+        android:text="@string/user_profile_textview"
+        android:textColor="@color/colorBlack"
+        android:textSize="80px" />
 
 </RelativeLayout>

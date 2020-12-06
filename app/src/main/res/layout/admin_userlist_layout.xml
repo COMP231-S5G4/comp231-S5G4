@@ -1,79 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/userNameTextview"
-        android:text="Username:"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        />
+        android:text="Username:"
+        android:textColor="@android:color/black" />
+
     <TextView
         android:id="@+id/ageTextview"
-        android:text="Age:"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userNameTextview"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/userNameTextview"
-        />
+        android:text="Age:"
+        android:textColor="@android:color/black" />
+
     <TextView
         android:id="@+id/genderTextview"
-        android:text="Gender:"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ageTextview"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/ageTextview"
-        />
+        android:text="Gender:"
+        android:textColor="@android:color/black" />
+
     <TextView
         android:id="@+id/listHeightTextview"
-        android:text="Height:"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genderTextview"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/genderTextview"
-        />
+        android:text="Height:"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/listWaistTextview"
-        android:text="Waist:"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="10dp"
-        />
+        android:text="Waist:"
+        android:textColor="@android:color/black" />
+
     <TextView
         android:id="@+id/rfmTextview"
-        android:text="RFM:"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userNameTextview"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/userNameTextview"
-        />
+        android:text="RFM:"
+        android:textColor="@android:color/black" />
+
     <TextView
         android:id="@+id/situpScoreTextview"
-        android:text="SitUp Score:"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ageTextview"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/ageTextview"
-        />
+        android:text="SitUp Score:"
+        android:textColor="@android:color/black" />
+
     <TextView
         android:id="@+id/pushupScoreTextview"
-        android:text="PushUpScore:"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genderTextview"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/genderTextview"
-        />
+        android:text="PushUpScore:"
+        android:textColor="@android:color/black" />
 
 
 </RelativeLayout>

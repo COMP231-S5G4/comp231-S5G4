@@ -1,13 +1,18 @@
 package com.comp231_s5g4.instabod;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,6 +29,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modify_user_profile);
+        setTitle("Profile");
         heightEditText = findViewById(R.id.searchEditText);
         waistEditText = findViewById(R.id.editWaistText);
         pushUpScoreEditText = findViewById(R.id.editPushupText);
@@ -31,7 +37,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
         freqExerciseEditText = findViewById(R.id.frequencyEditText);
 
         SharedPreferences sharedPreferences =  getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
-        userID = sharedPreferences.getInt("userId",-1);
+        userID = sharedPreferences.getInt("id",-1);
         try {
             db = new WorkoutUserManager(this);
             WorkoutUser workoutUser = db.getWorkoutUserById(userID, "username");
@@ -50,6 +56,29 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
             Log.i("Error: ",exception.getMessage());
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.option_menu_layout_2,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.optionTwoProfile:
+                home();
+                break;
+            case R.id.optionTwoLogout:
+                logout();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     public void modifyUserProfile(View v) throws Exception {
         double height=0,waist=0;
         int frequency=0,pushScore=0,situpScore=0;
@@ -170,6 +199,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
             workoutUser.setWaistCircumference(waist);
             workoutUser.setPushUpScore(pushScore);
             workoutUser.setSitUpScore(situpScore);
+            //Toast.makeText(getApplicationContext(),"Freq:"+frequency,Toast.LENGTH_LONG).show();
             workoutUser.setFrequencyOfExercise(frequency);
 
             double temp=height/waist;
@@ -179,7 +209,7 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
 
 
             SharedPreferences sharedPreferences =  getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
-            userID = sharedPreferences.getInt("userId",-1);
+            userID = sharedPreferences.getInt("id",-1);
 
             if(gender.equals("Male")){
                 rfm = 64 - (20 * temp);
@@ -213,5 +243,19 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
             }
 
         }
+    }
+    public void home(){
+        Intent intent = new Intent(this, WorkoutPlanActivity.class);
+        startActivity(intent);
+    }
+    public void logout(){
+        SharedPreferences sharedPreferences = getSharedPreferences("WorkoutUserSharedPreferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove("username");
+        editor.remove("password");
+        editor.remove("id");
+        editor.apply();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 }

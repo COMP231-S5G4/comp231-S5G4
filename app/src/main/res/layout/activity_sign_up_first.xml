@@ -54,6 +54,8 @@
         android:layout_marginLeft="250px"
         android:layout_marginTop="1120px"
         android:background="@color/colorGreen"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
         android:onClick="registerNext"
         android:text="@string/next" />
 

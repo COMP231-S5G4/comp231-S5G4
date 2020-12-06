@@ -31,7 +31,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_first);
-
+        setTitle("Sign Up");
         workoutUserManager= new WorkoutUserManager(this);
         usernameText = (EditText) findViewById(R.id.usernameText);
         passwordText = (EditText) findViewById(R.id.passwordText);
@@ -97,7 +97,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                             getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
                     SharedPreferences.Editor prefEditor = myPreference.edit();
                     prefEditor.clear();
-                    prefEditor.putInt("userId", userId);
+                    prefEditor.putInt("id", userId);
                     prefEditor.putString("username", username);
                     prefEditor.putString("password", password);
                     prefEditor.commit();
