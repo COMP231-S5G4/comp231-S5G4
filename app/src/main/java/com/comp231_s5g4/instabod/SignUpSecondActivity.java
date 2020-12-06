@@ -37,6 +37,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_second);
+        setTitle("Sign Up");
         workoutUserPref = getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
 
         ArrayList<String> genderList=new ArrayList<String>();

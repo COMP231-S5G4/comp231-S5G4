@@ -24,7 +24,7 @@ public class UserProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
-
+        setTitle("Profile");
         db= new WorkoutUserManager(getApplicationContext());
 
         editHeightTextView= findViewById(R.id.searchEditText);
@@ -165,7 +165,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
 
                     SharedPreferences sharedPreferences =  getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
-                    int userId = sharedPreferences.getInt("userId",-1);
+                    int userId = sharedPreferences.getInt("id",-1);
                     String username = sharedPreferences.getString("username",null);
                     String password = sharedPreferences.getString("password",null);
                     int age = sharedPreferences.getInt("age",-1);

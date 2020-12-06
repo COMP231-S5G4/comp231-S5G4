@@ -26,10 +26,16 @@ LoginActivity extends AppCompatActivity {
                     "securityQuestion2 text, securityAnswer2 text, height numeric, waistCircumference numeric, rfm numeric," +
                     "pushUpScore integer, sitUpScore integer, frequencyOfExercise integer);";
     WorkoutUserManager db;
+    SharedPreferences shared;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
+        int userId = shared.getInt("id",-1);
+        if(userId!= -1){
+            startActivity(new Intent(getApplicationContext(),WorkoutPlanActivity.class));
+        }
 
         db= new WorkoutUserManager(getApplicationContext());
         db.workoutUserDbInitialize(TABLE_NAME,tableCreatorString);
@@ -51,7 +57,6 @@ LoginActivity extends AppCompatActivity {
                 if(isError)
                 {
                     if(password.equals("Snowflake@69420") && username.equals("superSU")){
-                        SharedPreferences shared = getSharedPreferences(getResources().getString(R.string.sharedpreference), Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = shared.edit();
                         editor.putString("username",username);
                         editor.putString("password",password);

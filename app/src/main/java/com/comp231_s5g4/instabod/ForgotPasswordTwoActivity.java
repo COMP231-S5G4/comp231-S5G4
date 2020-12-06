@@ -26,7 +26,7 @@ public class ForgotPasswordTwoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password_two);
-
+        setTitle("Forgot Password");
         securityFirstQuestionText = (EditText) findViewById(R.id.securityQuestion1Text);
         securityFirstAnswerText = (EditText) findViewById(R.id.securityAnswer1Text);
         securitySecondQuestionText = (EditText) findViewById(R.id.securityQuestion2Text);

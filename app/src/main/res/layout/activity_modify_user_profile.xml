@@ -151,6 +151,8 @@
         android:layout_marginStart="91dp"
         android:layout_marginTop="17dp"
         android:background="@color/colorGreen"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
         android:onClick="modifyUserProfile"
         android:text="@string/modify_button"
         app:layout_constraintStart_toStartOf="parent"

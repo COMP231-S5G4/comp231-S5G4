@@ -120,6 +120,8 @@
         android:layout_marginLeft="250px"
         android:layout_marginTop="1450px"
         android:background="@color/colorGreen"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
         android:onClick="signUpButton"
         android:text="@string/sign_up_textview" />
 

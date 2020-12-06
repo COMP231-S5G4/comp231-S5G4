@@ -6,13 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_app_logo"
+        android:layout_marginTop="60dp"/>
+
     <TextView
         android:id="@+id/enterUserNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/username_textview"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="400px"
+        android:layout_marginTop="550px"
         android:textColor="@color/colorBlack" />
 
     <EditText
@@ -20,7 +28,7 @@
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="450px"
+        android:layout_marginTop="600px"
         android:ems="10"
         android:hint="Enter your username"
         />
@@ -32,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="@string/enter_password_textview"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="600px"
+        android:layout_marginTop="750px"
         android:textColor="@color/colorBlack"
         />
 
@@ -41,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="800px"
+        android:layout_marginTop="950px"
         android:onClick="forgotPassword"
         android:text="@string/forgot_password_textview"
         android:textColor="@color/colorGreen" />
@@ -50,7 +58,7 @@
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100px"
-        android:layout_marginTop="650px"
+        android:layout_marginTop="800px"
         android:ems="10"
         android:inputType="textPassword"
         android:hint="Enter Password"/>
@@ -60,8 +68,10 @@
         android:layout_width="600px"
         android:layout_height="200px"
         android:text="@string/login_textview"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
         android:layout_marginLeft="250px"
-        android:layout_marginTop="900px"
+        android:layout_marginTop="1050px"
         android:background="@color/colorGreen"
         />
     <Button
@@ -69,19 +79,12 @@
         android:layout_width="600px"
         android:layout_height="200px"
         android:text="@string/sign_up_textview"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
         android:layout_marginLeft="250px"
-        android:layout_marginTop="1120px"
+        android:layout_marginTop="1270px"
         android:onClick="signUp"
         android:background="@color/colorGreen"
         />
 
-    <TextView
-        android:id="@+id/loginTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login_textview"
-        android:textSize="80px"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200px"
-        android:textColor="@color/colorBlack"/>
 </RelativeLayout>
