@@ -60,6 +60,7 @@
         android:layout_marginLeft="600px"
         android:layout_marginTop="600px"
         android:text="@string/tutorial_textview"
+        android:onClick="firstTutorial"
         android:textColor="@color/colorPrimary" />
 
     <EditText
@@ -87,6 +88,7 @@
         android:layout_marginLeft="600px"
         android:layout_marginTop="800px"
         android:text="@string/tutorial_textview"
+        android:onClick="secondTutorial"
         android:textColor="@color/colorPrimary" />
 
     <EditText
@@ -117,8 +119,8 @@
         android:inputType="number" />
 
     <fragment
-        android:id="@+id/fragment"
-        android:name="com.comp231_s5g4.instabod.VideoUserProfileFragment"
+        android:id="@+id/youtube_player_fragment"
+        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:layout_marginTop="1500px" />

@@ -1,8 +1,10 @@
 package com.comp231_s5g4.instabod;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -10,8 +12,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class UserProfileActivity extends AppCompatActivity {
 
@@ -20,12 +28,23 @@ public class UserProfileActivity extends AppCompatActivity {
 
     WorkoutUserManager db;
 
+    private YouTubePlayerFragment youTubePlayerFragment;
+    //youtube player to play video when new video selected
+    private YouTubePlayer youTubePlayer;
+    private ArrayList<String> videoList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
         setTitle("Profile");
         db= new WorkoutUserManager(getApplicationContext());
+
+        // Below are the random videos for testing purposes
+        // put the appropriate ones when the youtube fragment works
+        videoList=new ArrayList<String>();
+        videoList.add("CqhpNxI8qYw");
+        videoList.add("sasCrpgHDy8");
 
         editHeightTextView= findViewById(R.id.searchEditText);
         editWaistText = findViewById(R.id.editWaistText);
@@ -230,5 +249,59 @@ public class UserProfileActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    public void firstTutorial(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Perform the Push Ups as shown in the video until you get exhausted and record your score").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (youTubePlayerFragment != null && youTubePlayer != null) {
+                    initializeYoutubePlayer(0);
+                }
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    public void secondTutorial(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Perform the Sit Ups as shown in the video for 1 minute and record your score").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (youTubePlayerFragment != null && youTubePlayer != null) {
+                    initializeYoutubePlayer(1);
+                }
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+    /**
+     * initialize youtube player via Fragment and get instance of YoutubePlayer
+     */
+    private void initializeYoutubePlayer(final int videoId) {
+        youTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager().findFragmentById(R.id.youtube_player_fragment);
+        if (youTubePlayerFragment == null)
+            return;
+        youTubePlayerFragment.initialize("AIzaSyBOF47UsXb1aPW1Z5cCI52lD8o35-Z83v8", new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player,
+                                                boolean wasRestored) {
+                if (!wasRestored) {
+                    youTubePlayer = player;
+                    //set the player style default
+                    youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS);
+                    //Cue the specific video based on the button
+                    youTubePlayer.cueVideo(videoList.get(videoId));
+                }
+            }
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider arg0, YouTubeInitializationResult arg1) {
+                //print or show error if initialization failed
+                Toast.makeText(getApplicationContext(), "Youtube Player View initialization failed", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
