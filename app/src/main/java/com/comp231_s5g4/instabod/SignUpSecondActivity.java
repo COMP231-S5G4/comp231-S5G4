@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -55,8 +57,45 @@ public class SignUpSecondActivity extends AppCompatActivity {
         securityFirstAnswerText = (EditText) findViewById(R.id.securityFirstAnswerText);
         securitySecondQuestionText = (EditText) findViewById(R.id.securitySecondQuestionText);
         securitySecondAnswerText = (EditText) findViewById(R.id.securitySecondAnswerText);
-    }
+        dateOfBirthText.setFocusable(false);
+        dateOfBirthText.setClickable(true);
 
+        dateOfBirthText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDailog();
+            }
+        });
+    }
+    public void showDatePickerDailog(){
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                int tempMonth = month+1;
+                int tempDayOfMonth = dayOfMonth;
+                String monthString;
+                String dayString;
+                if(tempMonth<10){
+                    monthString="0"+tempMonth;
+                }
+                else{
+                    monthString = ""+tempMonth;
+                }
+
+                if(tempDayOfMonth<10){
+                    dayString="0"+tempDayOfMonth;
+                }
+                else{
+                    dayString = ""+tempDayOfMonth;
+                }
+
+                String dateTemp= year + "/"+monthString+"/"+dayString;
+                dateOfBirthText.setText(dateTemp);
+
+            }
+        },2020,10,1);
+        datePickerDialog.show();
+    }
     //On click Method for the Next Button
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void signUpButton(View v) throws ParseException {

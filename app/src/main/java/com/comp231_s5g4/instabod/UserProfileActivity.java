@@ -10,6 +10,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
 
 import java.text.DecimalFormat;
 
@@ -19,12 +25,29 @@ public class UserProfileActivity extends AppCompatActivity {
     Button submitButton;
 
     WorkoutUserManager db;
-
+    YouTubePlayer playerRef;
+    YouTubePlayerFragment youtubeFragment;
+    private TextView tutorialOne,tutorialTwo;
+    boolean isVideoLoaded = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
         setTitle("Profile");
+        youtubeFragment = (YouTubePlayerFragment) getFragmentManager().findFragmentById(R.id.youtubeFragment);
+        youtubeFragment.initialize(YoutubeConfig.API_KEY, new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+                playerRef = youTubePlayer;
+                isVideoLoaded = true;
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+                isVideoLoaded = false;
+            }
+        });
+
         db= new WorkoutUserManager(getApplicationContext());
 
         editHeightTextView= findViewById(R.id.searchEditText);
@@ -32,6 +55,31 @@ public class UserProfileActivity extends AppCompatActivity {
         editPushupText = findViewById(R.id.editPushupText);
         situpEditText = findViewById(R.id.situpEditText);
         frequencyEditText = findViewById(R.id.frequencyEditText);
+        tutorialOne = findViewById(R.id.tutorialTextView);
+        tutorialTwo = findViewById(R.id.tutorial2TextView);
+        tutorialOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isVideoLoaded) {
+                    playerRef.loadVideo("IODxDxX7oi4");
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Failed to connect to YouTube Service",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        tutorialTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isVideoLoaded) {
+                    playerRef.loadVideo("1fbU_MkV7NE");
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Failed to connect to YouTube Service",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         submitButton = findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {

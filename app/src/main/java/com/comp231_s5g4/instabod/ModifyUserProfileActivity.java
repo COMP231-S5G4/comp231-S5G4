@@ -1,10 +1,12 @@
 package com.comp231_s5g4.instabod;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -15,9 +17,16 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
+
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModifyUserProfileActivity extends AppCompatActivity {
 
@@ -25,16 +34,59 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
     private int userID;
     private String gender;
     private WorkoutUserManager db;
+    YouTubePlayer playerRef;
+    YouTubePlayerFragment youtubeFragment;
+    private TextView tutorialOne,tutorialTwo;
+    boolean isVideoLoaded = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modify_user_profile);
+        youtubeFragment = (YouTubePlayerFragment) getFragmentManager().findFragmentById(R.id.youtubePlayerFragment);
+        youtubeFragment.initialize(YoutubeConfig.API_KEY, new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+                playerRef = youTubePlayer;
+                isVideoLoaded = true;
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+                isVideoLoaded = false;
+            }
+        });
+
         setTitle("Profile");
         heightEditText = findViewById(R.id.searchEditText);
         waistEditText = findViewById(R.id.editWaistText);
         pushUpScoreEditText = findViewById(R.id.editPushupText);
         sitUpScoreEditText = findViewById(R.id.situpEditText);
         freqExerciseEditText = findViewById(R.id.frequencyEditText);
+        tutorialOne = findViewById(R.id.tutorialTextView);
+        tutorialTwo = findViewById(R.id.tutorial2TextView);
+
+        tutorialOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isVideoLoaded) {
+                    playerRef.loadVideo("IODxDxX7oi4");
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Failed to connect to YouTube Service",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        tutorialTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isVideoLoaded) {
+                    playerRef.loadVideo("1fbU_MkV7NE");
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Failed to connect to YouTube Service",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         SharedPreferences sharedPreferences =  getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
         userID = sharedPreferences.getInt("id",-1);
@@ -204,20 +256,20 @@ public class ModifyUserProfileActivity extends AppCompatActivity {
 
             double temp=height/waist;
 
+
+
             double rfm;
-            rfm = 64 - (20 * temp);
 
 
             SharedPreferences sharedPreferences =  getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
             userID = sharedPreferences.getInt("id",-1);
 
             if(gender.equals("Male")){
-                rfm = 64 - (20 * temp);
+                rfm = 64.0d - (20.0d * temp);
             }
             else{
-                rfm = 76 - (20 * temp);
+                rfm = 76.0d - (20 * temp);
             }
-
             DecimalFormat df = new DecimalFormat("#.00");
             double formattedRFM = Double.parseDouble(df.format(rfm));
             workoutUser.setRfm(formattedRFM);

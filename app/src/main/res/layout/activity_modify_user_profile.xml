@@ -1,173 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ModifyUserProfileActivity">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/searchEditText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heightTextView" />
-
-    <EditText
-        android:id="@+id/editWaistText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/waistTextView" />
-
-    <TextView
-        android:id="@+id/heightTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/height_textview"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userProfileTextView" />
-
-    <TextView
-        android:id="@+id/waistTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/waist_textview"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
-
-    <TextView
-        android:id="@+id/tutorialTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/tutorial_textview"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintStart_toEndOf="@+id/pushupTextView"
-        app:layout_constraintTop_toBottomOf="@+id/editWaistText" />
-
-    <TextView
-        android:id="@+id/pushupTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="10dp"
-
-        android:text="@string/pushup_textview"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editWaistText" />
-
-    <TextView
-        android:id="@+id/situpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="9dp"
-        android:text="@string/situp_textview"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPushupText" />
-
-    <TextView
-        android:id="@+id/tutorial2TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="112dp"
-        android:text="@string/tutorial_textview"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPushupText" />
-
-    <EditText
-        android:id="@+id/situpEditText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/situpTextView" />
-
-    <TextView
-        android:id="@+id/frequencyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="6dp"
-        android:text="@string/frequency_textview"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/situpEditText" />
-
-    <EditText
-        android:id="@+id/frequencyEditText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frequencyTextView" />
-
-    <EditText
-        android:id="@+id/editPushupText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="1dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tutorialTextView" />
-
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.comp231_s5g4.instabod.VideoUserProfileFragment"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:layout_height="match_parent"
+        tools:context=".ModifyUserProfileActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="600px"
-        android:layout_height="200px"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="17dp"
-        android:background="@color/colorGreen"
-        android:textSize="25dp"
-        android:textColor="@android:color/white"
-        android:onClick="modifyUserProfile"
-        android:text="@string/modify_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frequencyEditText" />
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heightTextView" />
 
-    <TextView
-        android:id="@+id/userProfileTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/modify_user_profile_textview"
-        android:textColor="@color/colorBlack"
-        android:textSize="80px"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/editWaistText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/waistTextView" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/heightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/height_textview"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userProfileTextView" />
+
+        <TextView
+            android:id="@+id/waistTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waist_textview"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
+
+        <TextView
+            android:id="@+id/tutorialTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="127dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/tutorial_textview"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toEndOf="@+id/pushupTextView"
+            app:layout_constraintTop_toBottomOf="@+id/editWaistText" />
+
+        <TextView
+            android:id="@+id/pushupTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="10dp"
+
+            android:text="@string/pushup_textview"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editWaistText" />
+
+        <TextView
+            android:id="@+id/situpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="9dp"
+            android:text="@string/situp_textview"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPushupText" />
+
+        <TextView
+            android:id="@+id/tutorial2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="112dp"
+            android:text="@string/tutorial_textview"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPushupText" />
+
+        <EditText
+            android:id="@+id/situpEditText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/situpTextView" />
+
+        <TextView
+            android:id="@+id/frequencyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/frequency_textview"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/situpEditText" />
+
+        <EditText
+            android:id="@+id/frequencyEditText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frequencyTextView" />
+
+        <EditText
+            android:id="@+id/editPushupText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="1dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorialTextView" />
+
+        <fragment
+            android:id="@+id/youtubePlayerFragment"
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="600px"
+            android:layout_height="200px"
+            android:layout_marginStart="91dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/colorGreen"
+            android:onClick="modifyUserProfile"
+            android:text="@string/modify_button"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frequencyEditText" />
+
+        <TextView
+            android:id="@+id/userProfileTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/modify_user_profile_textview"
+            android:textColor="@color/colorBlack"
+            android:textSize="80px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
