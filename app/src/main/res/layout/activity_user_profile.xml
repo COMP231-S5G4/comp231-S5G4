@@ -1,147 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UserProfileActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/heightTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="200px"
-        android:text="@string/height_textview"
-        android:textColor="@color/colorBlack" />
-
-    <EditText
-        android:id="@+id/searchEditText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="250px"
-        android:ems="10"
-        android:inputType="numberDecimal" />
-
-    <TextView
-        android:id="@+id/waistTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="400px"
-        android:text="@string/waist_textview"
-        android:textColor="@color/colorBlack" />
-
-    <EditText
-        android:id="@+id/editWaistText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="450px"
-        android:ems="10"
-        android:inputType="numberDecimal" />
-
-    <TextView
-        android:id="@+id/pushupTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="600px"
-        android:text="@string/pushup_textview"
-        android:textColor="@color/colorBlack"
-
-        />
-
-    <TextView
-        android:id="@+id/tutorialTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="600px"
-        android:layout_marginTop="600px"
-        android:text="@string/tutorial_textview"
-        android:textColor="@color/colorPrimary" />
-
-    <EditText
-        android:id="@+id/editPushupText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="650px"
-        android:ems="10"
-        android:inputType="number" />
-
-    <TextView
-        android:id="@+id/situpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="800px"
-        android:text="@string/situp_textview"
-        android:textColor="@color/colorBlack" />
-
-    <TextView
-        android:id="@+id/tutorial2TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="600px"
-        android:layout_marginTop="800px"
-        android:text="@string/tutorial_textview"
-        android:textColor="@color/colorPrimary" />
-
-    <EditText
-        android:id="@+id/situpEditText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="850px"
-        android:ems="10"
-        android:inputType="number" />
-
-    <TextView
-        android:id="@+id/frequencyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="1000px"
-        android:text="@string/frequency_textview"
-        android:textColor="@color/colorBlack" />
-
-    <EditText
-        android:id="@+id/frequencyEditText"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="1050px"
-        android:ems="10"
-        android:inputType="number" />
-
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.comp231_s5g4.instabod.VideoUserProfileFragment"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_marginTop="1500px" />
+        android:layout_height="match_parent"
+        tools:context=".UserProfileActivity">
 
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="600px"
-        android:layout_height="200px"
-        android:layout_marginLeft="250px"
-        android:layout_marginTop="1250px"
-        android:background="@color/colorGreen"
-        android:text="@string/submit_button"
-        android:textColor="@android:color/white"
-        android:textSize="25dp" />
+        <TextView
+            android:id="@+id/heightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="200px"
+            android:text="@string/height_textview"
+            android:textColor="@color/colorBlack" />
 
-    <TextView
-        android:id="@+id/userProfileTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="280px"
-        android:layout_marginTop="30px"
-        android:text="@string/user_profile_textview"
-        android:textColor="@color/colorBlack"
-        android:textSize="80px" />
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="250px"
+            android:ems="10"
+            android:inputType="numberDecimal" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/waistTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="400px"
+            android:text="@string/waist_textview"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/editWaistText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="450px"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/pushupTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="600px"
+            android:text="@string/pushup_textview"
+            android:textColor="@color/colorBlack"
+
+            />
+
+        <TextView
+            android:id="@+id/tutorialTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="600px"
+            android:layout_marginTop="600px"
+            android:text="@string/tutorial_textview"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/editPushupText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="650px"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/situpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="800px"
+            android:text="@string/situp_textview"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/tutorial2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="600px"
+            android:layout_marginTop="800px"
+            android:text="@string/tutorial_textview"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/situpEditText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="850px"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/frequencyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="1000px"
+            android:text="@string/frequency_textview"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/frequencyEditText"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="1050px"
+            android:ems="10"
+            android:inputType="number" />
+
+        <fragment
+            android:id="@+id/youtubeFragment"
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="1500px" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="600px"
+            android:layout_height="200px"
+            android:layout_marginLeft="250px"
+            android:layout_marginTop="1250px"
+            android:background="@color/colorGreen"
+            android:text="@string/submit_button"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/userProfileTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280px"
+            android:layout_marginTop="30px"
+            android:text="@string/user_profile_textview"
+            android:textColor="@color/colorBlack"
+            android:textSize="80px" />
+
+    </RelativeLayout>
+</ScrollView>

@@ -44,12 +44,12 @@ public class FitnessInformationFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         sharedPreferences =  getActivity().getSharedPreferences("WorkoutUserSharedPreferences", MODE_PRIVATE);
-        userID = sharedPreferences.getInt("userId",-1);
+        userID = sharedPreferences.getInt("id",-1);
         try {
             db = new WorkoutUserManager(getActivity());
             WorkoutUser workoutUser = db.getWorkoutUserById(userID, "username");
 
-            rfmScoreTextView.setText(Double.toString(workoutUser.getRfm()) + "%");
+            rfmScoreTextView.setText(workoutUser.getRfm() + "%");
             pushUpScoreTextView.setText(Integer.toString(workoutUser.getPushUpScore()) + " push ups until exhausted");
             situpScoreTextView.setText(Integer.toString(workoutUser.getSitUpScore()) + " sit ups in a minute");
         }
